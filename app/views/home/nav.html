@@ -1,0 +1,8 @@
+<ul class="nav nav-pills nav-stacked nav-level-1" ng-repeat="group in vm.data">
+  <li>
+    <h4>{{group.label}}</h4>
+    <ul class="nav nav-pills nav-level-2">
+      <li ui-sref-active="active" ng-repeat="item in group.items"><a ui-sref="{{item.state}}">{{item.label}}</a></li>
+    </ul>
+  </li>
+</ul>

@@ -1,0 +1,8 @@
+<div class="btn-group">
+  <label ng-repeat="value in vm.values" ng-class="{btn: true, 'btn-primary': true, active: value.code == vm.selection.code}">
+    <input type="radio" class="hidden" name="myTestRadio" ng-model="vm.selection" ng-value="value"/>编号：{{value.code}}，年龄：{{value.age}}
+  </label>
+</div>
+<div>
+  您选中的是：{{vm.selection}}
+</div>

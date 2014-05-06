@@ -1,0 +1,9 @@
+'use strict';
+
+angular.module('ngShowcaseApp', [
+  'ngCookies',
+  'ngResource',
+  'ngSanitize',
+  'ui.router',
+  'ui.bootstrap'
+]);
