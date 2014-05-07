@@ -30,6 +30,16 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
       controller: 'ctrl.' + state,
       templateUrl: 'views/' + path + '.html'
     });
-    console.log('echo "<div ui-view></div>">views/' + path + '.html')
+  });
+});
+
+angular.module('ngShowcaseApp').run(function($rootScope, $templateCache, $http) {
+  $rootScope.sourceCode = {};
+  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
+    $rootScope.sourceCode.view = toState.template || $templateCache.get(toState.templateUrl)[1];
+    var fileName = toState.controller.replace(/^ctrl\./, '').replace(/\./g, '/') + '.js';
+    $http.get("scripts/controllers/" + fileName).success(function(data) {
+      $rootScope.sourceCode.controller = data;
+    });
   });
 });

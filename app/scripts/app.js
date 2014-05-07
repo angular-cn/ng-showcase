@@ -5,5 +5,6 @@ angular.module('ngShowcaseApp', [
   'ngResource',
   'ngSanitize',
   'ui.router',
-  'ui.bootstrap'
+  'ui.bootstrap',
+  'hljs'
 ]);

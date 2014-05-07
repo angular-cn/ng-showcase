@@ -19,6 +19,7 @@
   <!-- build:css styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/highlightjs/styles/github.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css({.tmp,app}) styles/main.css -->
@@ -38,8 +39,18 @@
     <div class="col-md-2">
       <app-nav></app-nav>
     </div>
-    <div class="col-md-10">
+    <div class="col-md-5">
       <div ui-view class="main-content">正在加载，请稍候……</div>
+    </div>
+    <div class="col-md-5">
+      <fieldset>
+        <legend>HTML</legend>
+        <div hljs source="sourceCode.view" language="html"></div>
+      </fieldset>
+      <fieldset>
+        <legend>JS</legend>
+        <div hljs source="sourceCode.controller" language="javascript"></div>
+      </fieldset>
     </div>
   </div>
 </div>
@@ -79,6 +90,8 @@
 <script src="bower_components/underscore/underscore.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="bower_components/moment/moment.js"></script>
+<script src="bower_components/highlightjs/highlight.pack.js"></script>
+<script src="bower_components/angular-highlightjs/angular-highlightjs.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
