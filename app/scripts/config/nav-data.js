@@ -29,6 +29,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'show.panel',
         label: '分组框'
+      },
+      {
+        state: 'show.tab',
+        label: '分页框'
       }
     ]
   },

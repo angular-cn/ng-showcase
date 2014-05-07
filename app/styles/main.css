@@ -48,3 +48,10 @@ ul.nav-level-2.nav>li>a {
   padding-bottom: 6px;
   border-bottom: 1px solid #eee;
 }
+
+.tab-content.tab-bordered {
+  border: 1px solid lightgray;
+  border-top: none;
+  padding: 15px;
+  border-radius: 0 0 4px 4px;
+}
