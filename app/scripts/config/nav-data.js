@@ -217,15 +217,6 @@ angular.module('ngShowcaseApp').constant('NavData', [
     ]
   },
   {
-    label: '列表',
-    items: [
-      {
-        state: 'list.thumbnail',
-        label: '缩略图列表'
-      }
-    ]
-  },
-  {
     label: '表单',
     items: [
       {
@@ -286,6 +277,15 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'utils.portal',
         label: '动态门户'
+      }
+    ]
+  },
+  {
+    label: '综合范例',
+    items: [
+      {
+        state: 'list.thumbnail',
+        label: '商品列表/购物车'
       }
     ]
   }
