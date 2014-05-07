@@ -2,30 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fc225b55-602a-4d1d-aa68-42f8cdc8dff1" name="Default" comment="">
-      <change type="DELETED" beforePath="M:\dev\ng-showcase\app\images\yeoman.png" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/about.html" afterPath="$PROJECT_DIR$/app/views/home/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/select/basic.html" afterPath="$PROJECT_DIR$/app/views/select/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/select/basic.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/select/basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/select/cascade.html" afterPath="$PROJECT_DIR$/app/views/select/cascade.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/select/cascade.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/select/cascade.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/checkbox.html" afterPath="$PROJECT_DIR$/app/views/input/checkbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/color.html" afterPath="$PROJECT_DIR$/app/views/input/color.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/home/contact.html" afterPath="$PROJECT_DIR$/app/views/home/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/date.html" afterPath="$PROJECT_DIR$/app/views/input/date.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/datetime.html" afterPath="$PROJECT_DIR$/app/views/input/datetime.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/email.html" afterPath="$PROJECT_DIR$/app/views/input/email.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/styles/main.css" afterPath="$PROJECT_DIR$/app/styles/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/maskedText.html" afterPath="$PROJECT_DIR$/app/views/input/maskedText.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/month.html" afterPath="$PROJECT_DIR$/app/views/input/month.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/config/nav-data.js" afterPath="$PROJECT_DIR$/app/scripts/config/nav-data.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/ng_showcase_node_modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\.name" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\jsLibraryMappings.xml" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\ng-showcase.iml" afterPath="" />
+      <change type="DELETED" beforePath="M:\dev\ng-showcase\.idea\vcs.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/number.html" afterPath="$PROJECT_DIR$/app/views/input/number.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/radio.html" afterPath="$PROJECT_DIR$/app/views/input/radio.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/textarea.html" afterPath="$PROJECT_DIR$/app/views/input/textarea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/list/thumbnail.html" afterPath="$PROJECT_DIR$/app/views/list/thumbnail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/scripts/controllers/list/thumbnail.js" afterPath="$PROJECT_DIR$/app/scripts/controllers/list/thumbnail.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/time.html" afterPath="$PROJECT_DIR$/app/views/input/time.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/url.html" afterPath="$PROJECT_DIR$/app/views/input/url.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/input/week.html" afterPath="$PROJECT_DIR$/app/views/input/week.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ng-showcase.iws" />
@@ -59,21 +48,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/styles/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.83458644" vertical-offset="1162" max-vertical-offset="1804">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="1804">
               <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cascade.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/scripts/controllers/select/cascade.js">
+      <file leaf-file-name="textarea.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/input/textarea.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1465" max-vertical-offset="1848">
-              <caret line="73" column="15" selection-start-line="73" selection-start-column="15" selection-end-line="73" selection-end-column="15" />
+            <state vertical-scroll-proportion="-2.8387096" vertical-offset="0" max-vertical-offset="242">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="number.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/views/input/number.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.1756487" vertical-offset="0" max-vertical-offset="501">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -114,16 +113,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.4193548" vertical-offset="0" max-vertical-offset="264">
               <caret line="2" column="61" selection-start-line="2" selection-start-column="61" selection-end-line="2" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cascade.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/select/cascade.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.387097" vertical-offset="211" max-vertical-offset="616">
-              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -191,8 +180,6 @@
         <option value="$PROJECT_DIR$/app/views/show/tab.html" />
         <option value="$PROJECT_DIR$/app/views/input/text.html" />
         <option value="$PROJECT_DIR$/app/views/input/maskedText.html" />
-        <option value="$PROJECT_DIR$/app/views/input/textarea.html" />
-        <option value="$PROJECT_DIR$/app/views/input/number.html" />
         <option value="$PROJECT_DIR$/app/views/input/url.html" />
         <option value="$PROJECT_DIR$/app/views/input/date.html" />
         <option value="$PROJECT_DIR$/app/views/input/datetime.html" />
@@ -213,6 +200,8 @@
         <option value="$PROJECT_DIR$/app/views/home/contact.html" />
         <option value="$PROJECT_DIR$/app/views/input/checkbox.html" />
         <option value="$PROJECT_DIR$/app/styles/main.css" />
+        <option value="$PROJECT_DIR$/app/views/input/textarea.html" />
+        <option value="$PROJECT_DIR$/app/views/input/number.html" />
       </list>
     </option>
   </component>
@@ -1157,14 +1146,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/input/textarea.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.1290324" vertical-offset="0" max-vertical-offset="242">
-          <caret line="3" column="35" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/input/url.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.1290324" vertical-offset="0" max-vertical-offset="242">
@@ -1234,14 +1215,6 @@
           <folding>
             <marker date="1399450452731" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/input/number.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7096774" vertical-offset="0" max-vertical-offset="242">
-          <caret line="1" column="23" selection-start-line="0" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1335,8 +1308,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/styles/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83458644" vertical-offset="1162" max-vertical-offset="1804">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1162" max-vertical-offset="1804">
           <caret line="73" column="39" selection-start-line="73" selection-start-column="39" selection-end-line="73" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/input/textarea.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.8387096" vertical-offset="0" max-vertical-offset="242">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/input/number.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1756487" vertical-offset="0" max-vertical-offset="501">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
