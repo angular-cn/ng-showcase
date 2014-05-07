@@ -5,6 +5,11 @@ Angular范例集
 
 当前进展：刚刚开始
 
+注意：clone下去之后，请先确保有node环境，然后执行npm install和bower install命令，以便对grunt环境进行初始化。
+之后就可以用grunt serve来启动服务器进行查看和调试了。
+
+稍后会将它发布到公网上。
+
 总体原则
 ------------
 
