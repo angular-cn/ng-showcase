@@ -52,6 +52,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '多行文本'
       },
       {
+        state: 'input.rich',
+        label: '富文本编辑'
+      },
+      {
         state: 'input.number',
         label: '数字'
       },
@@ -98,6 +102,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'input.color',
         label: '颜色'
+      },
+      {
+        state: 'input.file',
+        label: '文件上传'
       }
     ]
   },
@@ -208,11 +216,11 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'tree.checkbox',
-        label: '选择框'
+        label: '级联选择'
       },
       {
-        state: 'tree.icon',
-        label: '图标'
+        state: 'tree.nav',
+        label: '导航树'
       }
     ]
   },

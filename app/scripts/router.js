@@ -7,6 +7,7 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
     templateUrl: 'views/home/notFound.html'
   });
   var states = [];
+  // 把多级state弄成单级的，并自动补充父级路由，方便后续处理
   _.each(NavData, function(group) {
     _.each(group.items, function(item) {
       // 处理多级state，自动添加各个父级state
@@ -33,6 +34,12 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
   });
 });
 
+/**
+ * 支持查看源代码的通用功能
+ * 原理：
+ * 拦截路由变化的事件，并且根据route中的template或templateUrl参数获得view的源代码。
+ * 根据控制器名称和相应的规约获得动态取得controller的源代码。
+ */
 angular.module('ngShowcaseApp').run(function($rootScope, $templateCache, $http) {
   $rootScope.sourceCode = {};
   $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
