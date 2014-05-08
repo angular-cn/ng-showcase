@@ -6,5 +6,6 @@ angular.module('ngShowcaseApp', [
   'ngSanitize',
   'ui.router',
   'ui.bootstrap',
-  'hljs'
+  'hljs',
+  'easypiechart'
 ]);
