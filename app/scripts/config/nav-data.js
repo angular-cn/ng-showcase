@@ -32,7 +32,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'show.tab',
-        label: '分页框'
+        label: '多标签页'
       }
     ]
   },
@@ -256,10 +256,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
         state: 'stat.chart',
         label: '统计图'
       },
-        {
-            state: 'stat.easypiechart',
-            label: '百分比进度饼图'
-        }
+      {
+        state: 'stat.easypiechart',
+        label: '百分比进度饼图'
+      }
     ]
   },
   {
