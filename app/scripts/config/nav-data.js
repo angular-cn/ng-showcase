@@ -247,7 +247,11 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'stat.chart',
         label: '统计图'
-      }
+      },
+        {
+            state: 'stat.easypiechart',
+            label: '百分比进度饼图'
+        }
     ]
   },
   {
