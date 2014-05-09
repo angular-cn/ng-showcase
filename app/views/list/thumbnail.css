@@ -1,0 +1,13 @@
+/*缩略图的外观定制*/
+.thumbnail img {
+  height: 150px;
+}
+.thumbnail .items-details {
+  height: 3em;
+  overflow-y: auto;
+}
+
+tr.removed {
+  color: darkgray;
+  text-decoration: line-through;
+}

@@ -32,7 +32,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'show.tab',
-        label: '多标签页'
+        label: '标签页'
       }
     ]
   },
@@ -40,24 +40,16 @@ angular.module('ngShowcaseApp').constant('NavData', [
     label: '基本编辑控件',
     items: [
       {
-        state: 'input.text',
-        label: '单行文本'
+        state: 'input.html5',
+        label: 'HTML5'
       },
       {
         state: 'input.maskedText',
         label: '掩模输入框'
       },
       {
-        state: 'input.textarea',
-        label: '多行文本'
-      },
-      {
         state: 'input.rich',
         label: '富文本编辑'
-      },
-      {
-        state: 'input.number',
-        label: '数字'
       },
       {
         state: 'input.checkbox',
@@ -68,40 +60,12 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '单选框'
       },
       {
-        state: 'input.url',
-        label: 'URL'
-      },
-      {
-        state: 'input.email',
-        label: 'Email'
-      },
-      {
-        state: 'input.date',
-        label: '日期'
-      },
-      {
         state: 'input.calendar',
         label: '日历'
       },
       {
-        state: 'input.time',
-        label: '时间'
-      },
-      {
         state: 'input.datetime',
         label: '日期/时间'
-      },
-      {
-        state: 'input.month',
-        label: '月'
-      },
-      {
-        state: 'input.week',
-        label: '周'
-      },
-      {
-        state: 'input.color',
-        label: '颜色'
       },
       {
         state: 'input.file',
@@ -114,19 +78,19 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'select.basic',
-        label: '基本下拉框'
+        label: '基本'
       },
       {
         state: 'select.cascade',
-        label: '级联下拉框'
-      },
-      {
-        state: 'select.multiple',
-        label: '多选下拉框'
+        label: '级联'
       },
       {
         state: 'select.custom',
-        label: '自定义下拉框'
+        label: '自定义'
+      },
+      {
+        state: 'select.multiple',
+        label: '多选'
       },
       {
         state: 'select.typeAhead',
@@ -156,6 +120,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'table.filter',
         label: '过滤'
+      },
+      {
+        state: 'table.remote',
+        label: '后端综合'
       },
       {
         state: 'table.header',
@@ -195,7 +163,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'table.hover',
-        label: '单元格详情提示'
+        label: '详情提示'
       },
       {
         state: 'table.cascade',

@@ -34,20 +34,3 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
     });
   });
 });
-
-/**
- * 支持查看源代码的通用功能
- * 原理：
- * 拦截路由变化的事件，并且根据route中的template或templateUrl参数获得view的源代码。
- * 根据控制器名称和相应的规约获得动态取得controller的源代码。
- */
-angular.module('ngShowcaseApp').run(function($rootScope, $templateCache, $http) {
-  $rootScope.sourceCode = {};
-  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-    $rootScope.sourceCode.view = toState.template || $templateCache.get(toState.templateUrl)[1];
-    var fileName = toState.controller.replace(/^ctrl\./, '').replace(/\./g, '/') + '.js';
-    $http.get("scripts/controllers/" + fileName).success(function(data) {
-      $rootScope.sourceCode.controller = data;
-    });
-  });
-});
