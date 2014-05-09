@@ -187,8 +187,8 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '级联选择'
       },
       {
-        state: 'tree.nav',
-        label: '导航树'
+        state: 'tree.treeData',
+        label: 'TreeData'
       }
     ]
   },

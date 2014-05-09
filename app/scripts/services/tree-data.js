@@ -125,6 +125,9 @@ angular.module('ngHelper', []).factory('TreeData', function() {
         }
       });
     };
+    this.updateChecked = function(item) {
+      this._updateParents(this.tree, item);
+    };
     /**
      * 选中/反选指定节点
      * @param item {Object}
@@ -179,10 +182,11 @@ angular.module('ngHelper', []).factory('TreeData', function() {
     /**
      * 选中节点
      * @param item {Object}
+     * @param checked {boolean}
      */
-    this.check = function(item) {
+    this.check = function(item, checked) {
       item = this.find(item);
-      this._check(item, true);
+      this._check(item, checked || angular.isUndefined(checked));
     };
     /**
      * 反选节点
