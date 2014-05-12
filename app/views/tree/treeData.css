@@ -1,0 +1,13 @@
+.tree li {
+  cursor: pointer;
+  padding-left: 1.3em;
+}
+
+.tree ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.intermediate {
+  opacity: 0.3;
+}

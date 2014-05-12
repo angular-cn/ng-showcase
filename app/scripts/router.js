@@ -1,5 +1,6 @@
 angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvider, NavData) {
-  $urlRouterProvider.when('', '/');
+  $urlRouterProvider.when('', '/home/main');
+  $urlRouterProvider.when('/', '/home/main');
   $urlRouterProvider.otherwise('/notFound');
   $stateProvider.state('notFound', {
     url: '/notFound',
@@ -7,6 +8,7 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
     templateUrl: 'views/home/notFound.html'
   });
   var states = [];
+  // 把多级state弄成单级的，并自动补充父级路由，方便后续处理
   _.each(NavData, function(group) {
     _.each(group.items, function(item) {
       // 处理多级state，自动添加各个父级state
@@ -29,17 +31,6 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
       url: '/' + lastState,
       controller: 'ctrl.' + state,
       templateUrl: 'views/' + path + '.html'
-    });
-  });
-});
-
-angular.module('ngShowcaseApp').run(function($rootScope, $templateCache, $http) {
-  $rootScope.sourceCode = {};
-  $rootScope.$on('$stateChangeSuccess', function(event, toState, toParams, fromState, fromParams) {
-    $rootScope.sourceCode.view = toState.template || $templateCache.get(toState.templateUrl)[1];
-    var fileName = toState.controller.replace(/^ctrl\./, '').replace(/\./g, '/') + '.js';
-    $http.get("scripts/controllers/" + fileName).success(function(data) {
-      $rootScope.sourceCode.controller = data;
     });
   });
 });

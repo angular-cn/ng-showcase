@@ -7,5 +7,6 @@ angular.module('ngShowcaseApp', [
   'ui.router',
   'ui.bootstrap',
   'hljs',
-  'easypiechart'
+  'easypiechart',
+  'ngHelper'
 ]);

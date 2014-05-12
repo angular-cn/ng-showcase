@@ -1,0 +1,7 @@
+/*给分页框的内容区加边距和边框*/
+.tab-content.tab-bordered {
+  border: 1px solid lightgray;
+  border-top: none;
+  padding: 15px;
+  border-radius: 0 0 4px 4px;
+}

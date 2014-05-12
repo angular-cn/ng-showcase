@@ -43,14 +43,7 @@
       <div ui-view class="main-content">正在加载，请稍候……</div>
     </div>
     <div class="col-md-5">
-      <fieldset>
-        <legend>HTML</legend>
-        <div hljs source="sourceCode.view" language="html"></div>
-      </fieldset>
-      <fieldset>
-        <legend>JS</legend>
-        <div hljs source="sourceCode.controller" language="javascript"></div>
-      </fieldset>
+      <app-view-source></app-view-source>
     </div>
   </div>
 </div>
@@ -98,11 +91,15 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js" charset="utf-8"></script>
+<script src="lib/angular-locale_zh-cn.js" charset="utf-8"></script>
 <script src="scripts/config/nav-data.js" charset="utf-8"></script>
+<script src="scripts/config/city-data.js" charset="utf-8"></script>
+<script src="scripts/services/tree-data.js" charset="utf-8"></script>
 <script src="scripts/router.js" charset="utf-8"></script>
 <script src="scripts/directives/app/header.js" charset="utf-8"></script>
 <script src="scripts/directives/app/footer.js" charset="utf-8"></script>
 <script src="scripts/directives/app/nav.js" charset="utf-8"></script>
+<script src="scripts/directives/app/viewSource.js" charset="utf-8"></script>
 
 <script src="scripts/controllers/notFound.js" charset="utf-8"></script>
 
@@ -115,8 +112,11 @@
 <script src="scripts/controllers/show/progress.js" charset="utf-8"></script>
 <script src="scripts/controllers/show/panel.js" charset="utf-8"></script>
 <script src="scripts/controllers/input.js" charset="utf-8"></script>
+<script src="scripts/controllers/input/html5.js" charset="utf-8"></script>
 <script src="scripts/controllers/input/text.js" charset="utf-8"></script>
+<script src="scripts/controllers/input/file.js" charset="utf-8"></script>
 <script src="scripts/controllers/input/maskedText.js" charset="utf-8"></script>
+<script src="scripts/controllers/input/rich.js" charset="utf-8"></script>
 <script src="scripts/controllers/input/textarea.js" charset="utf-8"></script>
 <script src="scripts/controllers/input/number.js" charset="utf-8"></script>
 <script src="scripts/controllers/input/checkbox.js" charset="utf-8"></script>
@@ -142,6 +142,7 @@
 <script src="scripts/controllers/table/sort.js" charset="utf-8"></script>
 <script src="scripts/controllers/table/paging.js" charset="utf-8"></script>
 <script src="scripts/controllers/table/filter.js" charset="utf-8"></script>
+<script src="scripts/controllers/table/remote.js" charset="utf-8"></script>
 <script src="scripts/controllers/table/header.js" charset="utf-8"></script>
 <script src="scripts/controllers/table/frozen.js" charset="utf-8"></script>
 <script src="scripts/controllers/table/editing.js" charset="utf-8"></script>
@@ -157,7 +158,7 @@
 <script src="scripts/controllers/tree.js" charset="utf-8"></script>
 <script src="scripts/controllers/tree/basic.js" charset="utf-8"></script>
 <script src="scripts/controllers/tree/checkbox.js" charset="utf-8"></script>
-<script src="scripts/controllers/tree/icon.js" charset="utf-8"></script>
+<script src="scripts/controllers/tree/treeData.js" charset="utf-8"></script>
 <script src="scripts/controllers/list.js" charset="utf-8"></script>
 <script src="scripts/controllers/list/thumbnail.js" charset="utf-8"></script>
 <script src="scripts/controllers/form.js" charset="utf-8"></script>

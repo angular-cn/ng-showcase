@@ -4,9 +4,7 @@ body {
   padding-bottom: 20px;
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
   padding-left: 15px;
   padding-right: 15px;
@@ -49,29 +47,11 @@ ul.nav-level-2.nav>li>a {
   border-bottom: 1px solid #eee;
 }
 
-/*给分页框的内容区加边距和边框*/
-.tab-content.tab-bordered {
-  border: 1px solid lightgray;
-  border-top: none;
-  padding: 15px;
-  border-radius: 0 0 4px 4px;
-}
-
-/*缩略图的外观定制*/
-.thumbnail img {
-  height: 150px;
-}
-.thumbnail .items-details {
-  height: 3em;
-  overflow-y: auto;
-}
-
-tr.removed {
-  color: darkgray;
-  text-decoration: line-through;
-}
-
 input[type=checkbox], input[type=radio] {
   width: 16px;
   height: 16px;
+}
+
+.hljs-tag, .hljs-pi {
+  background: none;
 }
