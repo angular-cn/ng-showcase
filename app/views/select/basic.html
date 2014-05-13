@@ -15,6 +15,14 @@
   <div>您输入的是：{{vm.codeValue}}</div>
 </fieldset>
 <fieldset>
+  <legend>Demo - 分组</legend>
+  <label>
+    <select class="form-control" ng-model="vm.groupedValue" ng-options="city.code as city.label group by city.province for city in vm.cities ">
+      <option value="">-- 请选择城市 --</option>
+    </select></label>
+  <div>您输入的是：{{vm.groupedValue}}</div>
+</fieldset>
+<fieldset>
   <legend>Demo - track by</legend>
   <label>
     <select class="form-control" ng-model="vm.trackValue" ng-options="city.label for city in vm.cities track by city.code">

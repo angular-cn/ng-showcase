@@ -8,5 +8,5 @@ angular.module('ngShowcaseApp', [
   'ui.bootstrap',
   'hljs',
   'easypiechart',
-  'ngHelper'
+  'scHelper'
 ]);

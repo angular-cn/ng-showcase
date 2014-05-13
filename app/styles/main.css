@@ -55,3 +55,8 @@ input[type=checkbox], input[type=radio] {
 .hljs-tag, .hljs-pi {
   background: none;
 }
+
+table.table thead th {
+  text-align: center;
+  vertical-align: middle !important;
+}

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngHelper', []).factory('TreeData', function() {
+angular.module('scHelper').factory('TreeData', function() {
   /**
    * 能够自动处理树形数据联动的类，子节点列表必须命名为items。同时，节点会被增加三个属性：checked, folded, intermediate
    * @example

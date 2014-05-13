@@ -107,47 +107,27 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'table.basic',
-        label: '基本/数据类型'
+        label: '基本'
       },
       {
-        state: 'table.sort',
-        label: '排序'
-      },
-      {
-        state: 'table.paging',
-        label: '分页'
-      },
-      {
-        state: 'table.filter',
-        label: '过滤'
+        state: 'table.local',
+        label: '前端综合'
       },
       {
         state: 'table.remote',
         label: '后端综合'
       },
       {
-        state: 'table.header',
-        label: '复合表头'
-      },
-      {
         state: 'table.frozen',
         label: '锁定行/列'
       },
       {
-        state: 'table.editing',
-        label: '就地编辑'
-      },
-      {
-        state: 'table.checkbox',
-        label: '复选框'
+        state: 'table.summary',
+        label: '汇总行'
       },
       {
         state: 'table.virtual',
         label: '百万行大表'
-      },
-      {
-        state: 'table.summary',
-        label: '汇总行'
       },
       {
         state: 'table.tree',
@@ -162,16 +142,8 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '扩展信息'
       },
       {
-        state: 'table.hover',
-        label: '详情提示'
-      },
-      {
         state: 'table.cascade',
         label: '内嵌子表'
-      },
-      {
-        state: 'table.highlight',
-        label: '高亮规则'
       }
     ]
   },
