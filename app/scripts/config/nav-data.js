@@ -240,5 +240,13 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '商品列表/购物车'
       }
     ]
-  }
+  },{
+        label:'第三方组件',
+        items:[
+            {
+                state:'thirdparty.baiduueditor',
+                label:'百度UEditor'
+            }
+        ]
+    }
 ]);
