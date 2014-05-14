@@ -3,7 +3,9 @@ Angular范例集
 这是一个基于angular的界面元素范例程序，基于bootstrap 3框架，优先使用内置指令来完成。
 其目标是做一个类似smartclient等控件包的showcase程序，展示angular的能力，同时作为精简的备查字典。
 
-当前进展：刚刚开始，稍后会将它编译并发布到公网上。
+当前进展：刚刚开始。
+
+在线预览：http://www.ngnice.com/showcase/
 
 注意：
 
