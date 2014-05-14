@@ -199,6 +199,12 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: 'TreeData',
         authors: ['雪狼'],
         progress: 100
+      },
+      {
+        state: 'tree.uiTree',
+        label: 'UiTree',
+        authors: ['雪狼'],
+        progress: 10
       }
     ]
   },
