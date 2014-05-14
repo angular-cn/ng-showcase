@@ -49,6 +49,11 @@ angular.module('ngShowcaseApp').controller('ctrl.table.local', function ($scope)
       sortable: false
     }
   ];
+  // 供页面中使用的函数
+  vm.age = function(birthday) {
+    return moment().diff(birthday, 'years');
+  };
+
   vm.items = [];
   var MAX_NUM = 10 * 1000;
   function rand(min, max) {

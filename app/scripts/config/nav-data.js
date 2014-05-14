@@ -48,10 +48,6 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '掩模输入框'
       },
       {
-        state: 'input.rich',
-        label: '富文本编辑'
-      },
-      {
         state: 'input.checkbox',
         label: '检查框'
       },
