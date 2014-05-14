@@ -1,0 +1,26 @@
+<table class="layout-table">
+  <tr>
+    <th>作者：</th>
+    <td>
+      <span ng-repeat="author in vm.authors">
+        <a ng-href="{{author.github}}" target="_blank">{{author.name}}</a>
+        <a ng-href="mailto:{{author.email}}" target="_blank"><i class="glyphicon glyphicon glyphicon-send"></i></a>
+      </span>
+      <span ng-if="!vm.authors.length">
+        （暂无）
+        <a href="https://github.com/angular-cn/ng-showcase" target="_blank">Github参与</a>
+        或  加QQ群：200242234
+      </span>
+    </td>
+  </tr>
+  <tr>
+    <th>进度：</th>
+    <td>
+      <div class="progress">
+        <div class="progress-bar progress-bar-success" ng-style="{width: vm.progress + '%'}">
+          <span ng-if="vm.progress>0">{{vm.progress}}%</span>
+        </div>
+      </div>
+    </td>
+  </tr>
+</table>

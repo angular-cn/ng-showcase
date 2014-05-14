@@ -9,5 +9,6 @@ angular.module('ngShowcaseApp', [
   'hljs',
   'easypiechart',
   'scHelper',
-  'angularFileUpload'
+  'angularFileUpload',
+  'ui.select2'
 ]);

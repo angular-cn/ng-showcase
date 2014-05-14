@@ -24,15 +24,21 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'show.progress',
-        label: '进度条'
+        label: '进度条',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'show.panel',
-        label: '分组框'
+        label: '分组框',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'show.tab',
-        label: '标签页'
+        label: '标签页',
+        authors: ['雪狼'],
+        progress: 100
       }
     ]
   },
@@ -41,7 +47,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'input.html5',
-        label: 'HTML5'
+        label: 'HTML5',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'input.maskedText',
@@ -49,11 +57,15 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'input.checkbox',
-        label: '检查框'
+        label: '检查框',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'input.radio',
-        label: '单选框'
+        label: '单选框',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'input.calendar',
@@ -65,7 +77,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'input.file',
-        label: '文件上传'
+        label: '文件上传',
+        authors: ['雪狼'],
+        progress: 100
       }
     ]
   },
@@ -74,27 +88,39 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'select.basic',
-        label: '基本'
+        label: '基本',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'select.cascade',
-        label: '级联'
+        label: '级联',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'select.custom',
-        label: '自定义'
+        label: '自定义',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'select.multiple',
-        label: '多选'
+        label: '多选',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'select.typeAhead',
-        label: '自动完成'
+        label: '自动完成',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'select.select2',
-        label: 'Select2'
+        label: 'Select2',
+        authors: ['雪狼'],
+        progress: 100
       }
     ]
   },
@@ -103,11 +129,15 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'table.basic',
-        label: '基本'
+        label: '基本',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'table.local',
-        label: '前端综合'
+        label: '前端综合',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'table.remote',
@@ -148,15 +178,21 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'tree.basic',
-        label: '基本'
+        label: '基本',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'tree.checkbox',
-        label: '级联选择'
+        label: '级联选择',
+        authors: ['雪狼'],
+        progress: 100
       },
       {
         state: 'tree.treeData',
-        label: 'TreeData'
+        label: 'TreeData',
+        authors: ['雪狼'],
+        progress: 100
       }
     ]
   },
@@ -233,7 +269,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'list.thumbnail',
-        label: '商品列表/购物车'
+        label: '商品列表/购物车',
+        authors: ['雪狼'],
+        progress: 100
       }
     ]
   },{

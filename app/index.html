@@ -20,6 +20,7 @@
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
   <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css" />
+  <link rel="stylesheet" href="bower_components/select2/select2.css" />
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:css({.tmp,app}) styles/main.css -->
@@ -43,6 +44,7 @@
       <div ui-view class="main-content">正在加载，请稍候……</div>
     </div>
     <div class="col-md-5">
+      <app-view-status></app-view-status>
       <app-view-source></app-view-source>
     </div>
   </div>
@@ -87,6 +89,8 @@
 <script src="bower_components/angular-highlightjs/angular-highlightjs.js"></script>
 <script src="bower_components/angular.easy-pie-chart/dist/angular.easypiechart.js"></script>
 <script src="bower_components/angular-file-upload/angular-file-upload.js"></script>
+<script src="bower_components/select2/select2.js"></script>
+<script src="bower_components/angular-ui-select2/src/select2.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -101,6 +105,7 @@
 
 <script src="lib/angular-locale_zh-cn.js" charset="utf-8"></script>
 <script src="lib/ui-bootstrap-locale_zh-cn.js" charset="utf-8"></script>
+<script src="scripts/config/authors.js" charset="utf-8"></script>
 <script src="scripts/config/nav-data.js" charset="utf-8"></script>
 <script src="scripts/config/city-data.js" charset="utf-8"></script>
 
@@ -109,6 +114,7 @@
 <script src="scripts/directives/app/footer.js" charset="utf-8"></script>
 <script src="scripts/directives/app/nav.js" charset="utf-8"></script>
 <script src="scripts/directives/app/viewSource.js" charset="utf-8"></script>
+<script src="scripts/directives/app/viewStatus.js" charset="utf-8"></script>
 
 <script src="scripts/controllers/notFound.js" charset="utf-8"></script>
 
