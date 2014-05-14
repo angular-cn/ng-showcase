@@ -8,6 +8,9 @@ angular.module('ngShowcaseApp').controller('ctrl.table.basic', function ($scope)
       item.$checked = checked;
     });
   };
+  vm.selection = function() {
+    return _.where(vm.items, {$checked: true});
+  };
   // 供页面中使用的函数
   vm.age = function(birthday) {
     return moment().diff(birthday, 'years');

@@ -22,7 +22,7 @@
       <td>{{item.birthday|date}} ({{vm.age(item.birthday)}}岁)</td>
       <td class="text-right">{{item.income|currency}}</td>
       <td class="dropdown">
-        <span class="btn btn-primary btn-xs dropdown-toggle" data-toggle="toggle" title="详情"><i
+        <span class="btn btn-primary btn-xs dropdown-toggle" data-toggle="toggle" title="点此查看详情"><i
             class="glyphicon glyphicon-comment"></i></span>
 
         <div class="dropdown-menu panel-body">
@@ -38,6 +38,9 @@
     </tr>
     </tbody>
   </table>
+  <div> 选中的项：<br/>
+    <label class="label label-success" ng-repeat-start="item in vm.selection()">{{item.name}}</label><span ng-if="!$last && $index % 5 !== 4">,</span><br ng-repeat-end ng-if="$index % 5 === 4"/>
+  </div>
 </fieldset>
 <fieldset>
   <legend>说明</legend>
