@@ -7,15 +7,21 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'home.main',
-        label: '首页'
+        label: '首页',
+        authors: ['ngShowcase'],
+        progress: 10
       },
       {
         state: 'home.about',
-        label: '关于'
+        label: '关于',
+        authors: ['ngShowcase'],
+        progress: 10
       },
       {
         state: 'home.contact',
-        label: '联系我们'
+        label: '联系我们',
+        authors: ['ngShowcase'],
+        progress: 10
       }
     ]
   },
@@ -230,7 +236,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'stat.easypiechart',
-        label: '百分比进度饼图'
+        label: '百分比进度饼图',
+        authors: ['Ken'],
+        progress: 100
       }
     ]
   },
@@ -268,7 +276,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
     label: '综合范例',
     items: [
       {
-        state: 'list.thumbnail',
+        state: 'integrated.cart',
         label: '商品列表/购物车',
         authors: ['雪狼'],
         progress: 100
@@ -285,4 +293,5 @@ angular.module('ngShowcaseApp').constant('NavData', [
             }
         ]
     }
+
 ]);
