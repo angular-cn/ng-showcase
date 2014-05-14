@@ -279,7 +279,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
         items:[
             {
                 state:'thirdparty.baiduueditor',
-                label:'百度UEditor'
+                label:'百度UEditor',
+                authors: ['zxsoft'],
+                progress: 60
             }
         ]
     }
