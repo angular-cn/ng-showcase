@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ngShowcaseApp').controller('ctrl.list.thumbnail', function ($scope) {
+angular.module('ngShowcaseApp').controller('ctrl.integrated.cart', function ($scope) {
   var vm = $scope.vm = {};
   vm.items = [
     {
@@ -19,7 +19,7 @@ angular.module('ngShowcaseApp').controller('ctrl.list.thumbnail', function ($sco
     }
   ];
   vm.cart = {
-    label: '某某的购物车',
+    label: '张三的购物车',
     lines: []
   };
   vm.addToCart = function addToCart(item) {
