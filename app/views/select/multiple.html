@@ -1,36 +1,44 @@
 <link rel="stylesheet" href="views/select/multiple.css"/>
-<div class="dropdown custom-select">
-  <div class="input-group">
-    <input type="text" class="form-control" />
-    <span class="input-group-addon"  ng-click="vm.dropdown = !vm.dropdown"><i class="glyphicon glyphicon-chevron-down"></i></span>
-  </div>
-  <div class="dropdown-menu collapse" ng-class="{in: vm.dropdown}" ng-blur="vm.dropdown = false">
-    <table class="table table-hover">
-      <thead>
-      <tr>
-        <th></th>
-        <th>名称</th>
-        <th>所属省份</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr ng-repeat="city in vm.cities" ng-click="city.checked = !city.checked">
-        <td>
-          <input type="checkbox" ng-model="city.checked" />
-        </td>
-        <td>
-          <label>{{city.label}}</label>
-        </td>
-        <td>{{city.province}}</td>
-      </tr>
-      </tbody>
-    </table>
-    <div ng-repeat="select in vm.selection()">
-      {{select}}
+<fieldset>
+  <legend>多选 - 自定义下拉框</legend>
+  <div class="dropdown custom-select">
+    <div class="input-group">
+      <input type="text" class="form-control"/>
+      <span class="input-group-addon" ng-click="vm.dropdown = !vm.dropdown"><i
+          class="glyphicon glyphicon-chevron-down"></i></span>
     </div>
-    <div>
-      <span class="btn btn-success" ng-click="vm.dropdown = false">确定</span>
+    <div class="dropdown-menu collapse" ng-class="{in: vm.dropdown}" ng-blur="vm.dropdown = false">
+      <table class="table table-hover">
+        <thead>
+        <tr>
+          <th></th>
+          <th>名称</th>
+          <th>所属省份</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="city in vm.cities" ng-click="city.checked = !city.checked">
+          <td>
+            <input type="checkbox" ng-model="city.checked"/>
+          </td>
+          <td>
+            <label>{{city.label}}</label>
+          </td>
+          <td>{{city.province}}</td>
+        </tr>
+        </tbody>
+      </table>
+      <div ng-repeat="select in vm.selection()">
+        {{select}}
+      </div>
+      <div>
+        <span class="btn btn-success" ng-click="vm.dropdown = false">确定</span>
+      </div>
     </div>
   </div>
-</div>
-<input type="text" placeholder="背景控件应该被正常遮盖"/>
+  <input type="text" placeholder="背景控件应该被正常遮盖"/>
+  <h4>选择结果：</h4>
+  <div ng-repeat="select in vm.selection()">
+    {{select}}
+  </div>
+</fieldset>

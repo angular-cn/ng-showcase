@@ -8,5 +8,6 @@ angular.module('ngShowcaseApp', [
   'ui.bootstrap',
   'hljs',
   'easypiechart',
-  'scHelper'
+  'scHelper',
+  'angularFileUpload'
 ]);
