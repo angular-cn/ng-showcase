@@ -45,6 +45,12 @@ angular.module('ngShowcaseApp').constant('NavData', [
         label: '标签页',
         authors: ['雪狼'],
         progress: 100
+      },
+      {
+        state: 'show.alert',
+        label: '警告框',
+        authors: ['playing'],
+        progress: 80
       }
     ]
   },

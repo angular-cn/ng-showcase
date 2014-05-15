@@ -11,9 +11,9 @@
   <div class="row">
     <div class="col-md-6">
       <p class="input-group">
-        <input type="text" class="form-control" datepicker-popup="{{vm.format}}" ng-model="vm.calendar" is-open="vm.opened" min-date="vm.minDate" max-date="'2015-06-22'" datepicker-options="vm.dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+        <input type="text" class="form-control" datepicker-popup="{{vm.format}}" ng-model="vm.calendar" is-open="vm.opened" min-date="vm.minDate" max-date="'2015-06-22'" datepicker-options="vm.dateOptions" date-disabled="vm.disabled(date, mode)" ng-required="true" close-text="关闭" />
         <span class="input-group-btn">
-          <button type="button" class="btn btn-default" ng-click="open($event)"> <i class="glyphicon glyphicon-calendar"></i>
+          <button type="button" class="btn btn-default" ng-click="vm.open($event)"> <i class="glyphicon glyphicon-calendar"></i>
           </button>
         </span>
       </p>
@@ -30,10 +30,10 @@
   </div>
   <hr/>
 
-  <button type="button" class="btn btn-sm btn-info" ng-click="today()">选中今天</button>
+  <button type="button" class="btn btn-sm btn-info" ng-click="vm.today()">选中今天</button>
   <button type="button" class="btn btn-sm btn-default" ng-click="vm.calendar = '2014-05-14'">2014-05-14</button>
-  <button type="button" class="btn btn-sm btn-danger" ng-click="clear()">清空</button>
-  <button type="button" class="btn btn-sm btn-default" ng-click="toggleMin()" tooltip="是否允许选择当前日期之前的日期">最小日期</button>
+  <button type="button" class="btn btn-sm btn-danger" ng-click="vm.clear()">清空</button>
+  <button type="button" class="btn btn-sm btn-default" ng-click="vm.toggleMin()" tooltip="是否允许选择当前日期之前的日期">最小日期</button>
 </fieldset>
 
 <fieldset>
@@ -41,7 +41,7 @@
   <ul>
     <li>
       来自angular-bootstrap的第三方日历控件，更多功能和设置请参考
-      <a href="http://angular-ui.github.io/bootstrap/#/datepicker" target="_blank">官方Demo</a>。
+      <a href="http://angular-ui.github.io/bootstrap/" target="_blank">官方Demo</a>。
     </li>
     <li>
       日期输出格式使用了官方的Date过滤器，

@@ -4,44 +4,44 @@ angular.module('ngShowcaseApp').controller('ctrl.input.calendar', function ($sco
   var vm = $scope.vm = {};
 
   //初始化日期
-   $scope.today = function() {
-    $scope.vm.calendar = new Date();
+  vm.today = function() {
+    vm.calendar = new Date();
   };
-  $scope.today();
+  vm.today();
 
   //清除当前日期
-  $scope.clear = function () {
-    $scope.vm.calendar = null;
+  vm.clear = function() {
+    vm.calendar = null;
   };
 
 
   // 不允许选择周末
-  $scope.disabled = function(date, mode) {
-    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+  vm.disabled = function(date, mode) {
+    return (mode === 'day' && (date.getDay() === 0 || date.getDay() === 6));
   };
 
   //最小日期开关
-  $scope.toggleMin = function() {
-    $scope.vm.minDate = $scope.vm.minDate ? null : new Date();
+  vm.toggleMin = function() {
+    vm.minDate = vm.minDate ? null : new Date();
   };
-  $scope.toggleMin();
+  vm.toggleMin();
 
   //弹出式日历触发函数
-  $scope.open = function($event) {
+  vm.open = function($event) {
     $event.preventDefault();
     $event.stopPropagation();
 
-    $scope.vm.opened = true;
+    vm.opened = true;
   };
 
   //自定义选项
-  $scope.vm.dateOptions = {
+  vm.dateOptions = {
     formatYear: 'yy',
     startingDay: 1,
     formatDayTitle: 'yyyy MMMM'
   };
 
   //输出格式控制,来源:官方date filter
-  $scope.vm.formats = ['yyyy-MMMM-dd', 'yyyy/MM/dd', 'yyyy.MM.dd', 'shortDate'];
-  $scope.vm.format = $scope.vm.formats[1];
+  vm.formats = ['yyyy-MMMM-dd', 'yyyy/MM/dd', 'yyyy.MM.dd', 'shortDate'];
+  vm.format = vm.formats[1];
 });
