@@ -10,14 +10,19 @@ angular.module('ngShowcaseApp').constant('authors', [
     name: '雪狼',
     email: 'asnowwolf@gmail.com',
     github: 'https://github.com/asnowwolf'
-  },{
-        name: 'zxsoft',
-        qq: '21557523',
-        email: 'zxsoft@gmail.com',
-        github: 'https://github.com/zxsoft'
-    },
+  },
+  {
+    name: 'zxsoft',
+    qq: '21557523',
+    email: 'zxsoft@gmail.com',
+    github: 'https://github.com/zxsoft'
+  },
   {
     name: 'Ken',
     github: 'https://github.com/ckken'
+  },
+  {
+    name: 'playing',
+    github: 'https://github.com/playing'
   }
 ]);
