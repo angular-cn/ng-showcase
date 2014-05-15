@@ -23,6 +23,7 @@ angular.module('ngShowcaseApp').constant('authors', [
   },
   {
     name: 'playing',
+    email: 'bestplayingcn@gmail.com',
     github: 'https://github.com/playing'
   }
 ]);

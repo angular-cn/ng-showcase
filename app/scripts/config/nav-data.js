@@ -75,7 +75,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'input.calendar',
-        label: '日历'
+        label: '日历',
+        authors: ['playing'],
+        progress: 100
       },
       {
         state: 'input.datetime',
