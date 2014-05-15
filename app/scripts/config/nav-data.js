@@ -9,19 +9,19 @@ angular.module('ngShowcaseApp').constant('NavData', [
         state: 'home.main',
         label: '首页',
         authors: ['ngShowcase'],
-        progress: 10
+        progress: 40
       },
       {
         state: 'home.about',
         label: '关于',
         authors: ['ngShowcase'],
-        progress: 10
+        progress: 80
       },
       {
         state: 'home.contact',
         label: '联系我们',
         authors: ['ngShowcase'],
-        progress: 10
+        progress: 80
       }
     ]
   },

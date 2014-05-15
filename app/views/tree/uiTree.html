@@ -1,8 +1,11 @@
-<ul>
-  <li sf-treepeat="node in children of treeData">
-    <span ng-if="node.id">{{node.id}} - </span>{{node.name}}
-    <ul>
-      <li sf-treecurse></li>
-    </ul>
-  </li>
-</ul>
+<link rel="stylesheet" href="views/tree/treeData.css"/>
+<div class="tree">
+  <ul>
+    <li sf-treepeat="node in children of treeData">
+      <span ng-if="node.id">{{node.id}} - </span>{{node.name}}
+      <ul>
+        <li sf-treecurse></li>
+      </ul>
+    </li>
+  </ul>
+</div>

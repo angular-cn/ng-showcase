@@ -1,25 +1,25 @@
 <link rel="stylesheet" href="views/tree/treeData.css" />
 <fieldset>
-  <legend>Demo</legend>
+  <legend>TreeData范例</legend>
   <div class="tree">
     <ul>
-      <li ng-repeat="country in vm.countries" ng-class="{closed:country.closed}">
+      <li ng-repeat="country in vm.countries" ng-class="{closed:vm.tree.isFolded(country)}">
         <div>
           <input type="checkbox" ng-model="country.checked" ng-change="vm.tree.check(country, country.checked)" ng-class="{intermediate: vm.tree.isSemiChecked(country)}"/>
-          <span ng-click="country.closed=!country.closed">
-            <span class="glyphicon" ng-class="country.closed?'glyphicon-plus':'glyphicon-minus'"></span>
+          <span ng-click="vm.tree.toggleFold(country)">
+            <span class="glyphicon" ng-class="vm.tree.isFolded(country)?'glyphicon-plus':'glyphicon-minus'"></span>
             <img ng-src="images/{{country.flag}}"/>
             {{country.label}}
           </span>
         </div>
-        <ul ng-class="{hidden: country.closed}">
-          <li ng-repeat="province in country.items" ng-class="{closed:province.closed}">
+        <ul ng-class="{hidden: vm.tree.isFolded(country)}">
+          <li ng-repeat="province in country.items" ng-class="{closed:vm.tree.isFolded(province)}">
             <input type="checkbox" ng-model="province.checked" ng-change="vm.tree.check(province, province.checked)" ng-class="{intermediate: vm.tree.isSemiChecked(province)}"/>
-            <span ng-click="province.closed=!province.closed">
-              <span class="glyphicon" ng-class="province.closed?'glyphicon-plus':'glyphicon-minus'"></span>
+            <span ng-click="vm.tree.toggleFold(province)">
+              <span class="glyphicon" ng-class="vm.tree.isFolded(province)?'glyphicon-plus':'glyphicon-minus'"></span>
               {{province.label}}
             </span>
-            <ul ng-class="{hidden: province.closed}">
+            <ul ng-class="{hidden: vm.tree.isFolded(province)}">
               <li ng-repeat="city in province.items">
                 <label>
                   <input type="checkbox" ng-model="city.checked" ng-change="vm.tree.check(city, city.checked)"/>
