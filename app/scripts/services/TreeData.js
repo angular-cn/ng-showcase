@@ -119,9 +119,10 @@ angular.module('scHelper').factory('TreeData', function() {
     this._updateParents = function(items, item) {
       _.each(items, function(subItem) {
         if(_this.hasChildren(subItem, item)) {
+          // 先要递归更新子级，否则中间节点的状态可能仍然处于选中状态，会影响当前节点的判断
+          _this._updateParents(subItem.items, item);
           subItem.checked = _this.hasCheckedChildren(subItem);
           subItem.semiChecked = _this.isSemiChecked(subItem);
-          _this._updateParents(subItem.items, item);
         }
       });
     };

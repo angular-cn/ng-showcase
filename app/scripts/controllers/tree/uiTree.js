@@ -2,73 +2,40 @@
 
 angular.module('ngShowcaseApp').controller('ctrl.tree.uiTree', function ($scope) {
   var vm = $scope.vm = {};
-
-  vm.countries = [
-    {
-      label: '中国',
-      flag: 'cn.png',
-      items: [
-        {
-          label: '北京',
-          items: [
-            {
-              label: '朝阳区'
-            },
-            {
-              label: '宣武区'
-            },
-            {
-              label: '海淀区'
-            }
-          ]
-        },
-        {
-          label: '河北',
-          items: [
-            {
-              label: '石家庄'
-            },
-            {
-              label: '承德'
-            },
-            {
-              label: '唐山'
-            }
-          ]
+  $scope.treeData = {
+    name: "Root",
+    children: [
+      {
+        id: 1,
+        name: "First Child",
+        children: [
+          {
+            id: 11,
+            name: "First Grandchild"
+          },
+          {
+            id: 12,
+            name: "Second Grandchild"
+          }
+        ]
+      },
+      {
+        id: 2,
+        name: "Second Child"
+      }
+    ]
+  };
+  $scope.drop = function (targetNode, sourceNode, sourceParentNode) {
+    var children = sourceParentNode.children;
+    for (var i = 0; i < children.length; i++) {
+      if (children[i] == sourceNode) {
+        children.splice(i, 1);
+        if (!targetNode.children) {
+          targetNode.children = [];
         }
-      ]
-    },
-    {
-      label: '美国',
-      flag: 'us.png',
-      items: [
-        {
-          label: '纽约',
-          items: [
-            {
-              label: '曼哈顿区'
-            },
-            {
-              label: '皇后区'
-            }
-          ]
-        },
-        {
-          label: '德克萨斯州',
-          items: [
-            {
-              label: '休斯顿'
-            },
-            {
-              label: '达拉斯'
-            }
-          ]
-        },
-        {
-          label: '加利福尼亚州'
-        }
-      ]
+        targetNode.children.push(sourceNode);
+        break;
+      }
     }
-  ];
-  vm.tree = vm.countries;
+  };
 });

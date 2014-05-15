@@ -8,7 +8,7 @@
           <input type="checkbox" ng-model="country.checked" ng-change="vm.countryChanged(country)" ng-class="{intermediate: vm.isIntermediateCountry(country)}"/>
           <span ng-click="country.closed=!country.closed">
             <span class="glyphicon" ng-class="country.closed?'glyphicon-plus':'glyphicon-minus'"></span>
-            <img ng-src="/images/{{country.flag}}"/>
+            <img ng-src="images/{{country.flag}}"/>
             {{country.label}}
           </span>
         </div>

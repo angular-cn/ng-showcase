@@ -10,5 +10,6 @@ angular.module('ngShowcaseApp', [
   'easypiechart',
   'scHelper',
   'angularFileUpload',
-  'ui.select2'
+  'ui.select2',
+  'sf.treeRepeat'
 ]);

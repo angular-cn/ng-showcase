@@ -1,7 +1,7 @@
 'use strict';
 
 describe('Service: TreeData', function() {
-  beforeEach(module('ngHelper'));
+  beforeEach(module('scHelper'));
 
   var TreeData;
   var node1, node11, node12, node121, node122;
@@ -79,6 +79,10 @@ describe('Service: TreeData', function() {
     expect(node12.checked).toBeTruthy();
     expect(node1.checked).toBeTruthy();
     expect(node2.checked).toBeFalsy();
+    tree.uncheck(node121);
+    expect(node121.checked).toBeFalsy();
+    expect(node12.checked).toBeFalsy();
+    expect(node1.checked).toBeFalsy();
   });
   it('半选中状态向上级的扩散', function() {
     var tree = new TreeData(data);

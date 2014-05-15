@@ -6,7 +6,7 @@
       <li ng-repeat="country in vm.countries" ng-class="{closed:country.closed}">
         <div ng-click="country.closed=!country.closed">
           <span class="glyphicon" ng-class="country.closed?'glyphicon-plus':'glyphicon-minus'"></span>
-          <img ng-src="/images/{{country.flag}}"/>
+          <img ng-src="images/{{country.flag}}"/>
           {{country.label}}
         </div>
         <ul ng-class="{hidden: country.closed}">
@@ -25,7 +25,7 @@
       </li>
     </ul>
   </div>
-  <div ng-if="vm.city">国家：<img ng-src="/images/{{vm.country.flag}}">{{vm.country.label}} 省份：{{vm.province.label}}
+  <div ng-if="vm.city">国家：<img ng-src="images/{{vm.country.flag}}">{{vm.country.label}} 省份：{{vm.province.label}}
     城市：{{vm.city.label}}
   </div>
 </fieldset>
