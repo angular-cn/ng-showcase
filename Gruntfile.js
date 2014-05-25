@@ -74,10 +74,7 @@ module.exports = function (grunt) {
           context: '/api', // the context of the data service
           host: 'www.ngnice.com', // wherever the data service is running
           port: 80,
-          changeOrigin: true,
-          rewrite: {
-            '^/api': '/api'
-          }
+          changeOrigin: true
         }
       ],
       livereload: {
