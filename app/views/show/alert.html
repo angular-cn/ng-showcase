@@ -1,6 +1,6 @@
 <fieldset>
   <legend>警告框</legend>
-    <div ng-repeat="alert in vm.alerts" class="alert alert-{{alert.type}} alert-dismissable">
+    <div ng-repeat="alert in vm.alerts" ng-class="['alert', 'alert-dismissable', alert.type]">
       <button type="button" class="close" ng-click="vm.closeAlert($index)">&times;</button>
       {{alert.msg}}
     </div>

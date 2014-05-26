@@ -4,15 +4,15 @@ angular.module('ngShowcaseApp').controller('ctrl.show.alert', function ($scope) 
   var vm = $scope.vm = {};
   //警告类型
   vm.types = [
-    'success',
-    'info',
-    'warning',
-    'danger'
+    'alert-success',
+    'alert-info',
+    'alert-warning',
+    'alert-danger'
   ];
 
   vm.alerts = [
-    {type:'success',msg:'操作成功,请继续下一步!'},
-    {type:'danger',msg:'提交失败,修改内容并尝试重新提交!'},
+    {type:'alert-success',msg:'操作成功,请继续下一步!'},
+    {type:'alert-danger',msg:'提交失败,修改内容并尝试重新提交!'},
   ];
   //删除单条警告
   vm.closeAlert = function (index) {
@@ -22,7 +22,7 @@ angular.module('ngShowcaseApp').controller('ctrl.show.alert', function ($scope) 
   vm.addAlert = function (type, msg) {
     if (type === undefined || msg === undefined) {
       vm.alerts.push({
-        type:'warning',
+        type:'alert-warning',
         msg:'类型和内容不能为空.'
       });
     } else {
