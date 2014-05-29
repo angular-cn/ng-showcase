@@ -4,6 +4,7 @@ angular.module('ngShowcaseApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
+  'ngAnimate',
   'ui.router',
   'ui.bootstrap',
   'hljs',

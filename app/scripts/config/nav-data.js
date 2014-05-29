@@ -50,7 +50,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
         state: 'show.alert',
         label: '警告框',
         authors: ['playing'],
-        progress: 80
+        progress: 100
       }
     ]
   },
@@ -261,7 +261,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'animation.basic',
-        label: '基本'
+        label: '基本',
+        authors: ['playing'],
+        progress: 100
       },
       {
         state: 'animation.custom',
@@ -274,7 +276,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'utils.modal',
-        label: '模态对话框'
+        label: '模态对话框',
+        authors: ['playing'],
+        progress: 100
       },
       {
         state: 'utils.dragAndDrop',
