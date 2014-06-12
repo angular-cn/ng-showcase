@@ -9,6 +9,7 @@
     "bootstrap": "~3.0.3",
     "angular-resource": "1.2.15",
     "angular-cookies": "1.2.15",
+    "angular-animate": "1.2.15",
     "angular-sanitize": "1.2.15",
     "angular-ui-router": "~0.2.10",
     "underscore": "~1.6.0",

@@ -19,7 +19,7 @@
         <tbody>
         <tr ng-repeat="city in vm.cities" ng-click="city.checked = !city.checked">
           <td>
-            <input type="checkbox" ng-model="city.checked"/>
+            <input type="checkbox" ng-checked="city.checked" />
           </td>
           <td>
             <label>{{city.label}}</label>

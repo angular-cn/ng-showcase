@@ -19,7 +19,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'home.contact',
-        label: '联系我们',
+        label: '关注我们',
         authors: ['ngShowcase'],
         progress: 80
       }
@@ -50,7 +50,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
         state: 'show.alert',
         label: '警告框',
         authors: ['playing'],
-        progress: 80
+        progress: 100
       }
     ]
   },
@@ -223,7 +223,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'form.basic',
-        label: '基本校验'
+        label: '基本校验',
+        authors: ['why520crazy'],
+        progress: 80
       },
       {
         state: 'form.remoteValidation',
@@ -263,7 +265,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'animation.basic',
-        label: '基本'
+        label: '基本',
+        authors: ['playing'],
+        progress: 100
       },
       {
         state: 'animation.custom',
@@ -276,7 +280,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
     items: [
       {
         state: 'utils.modal',
-        label: '模态对话框'
+        label: '模态对话框',
+        authors: ['playing'],
+        progress: 100
       },
       {
         state: 'utils.dragAndDrop',
@@ -298,16 +304,17 @@ angular.module('ngShowcaseApp').constant('NavData', [
         progress: 100
       }
     ]
-  },{
-        label:'第三方组件',
-        items:[
-            {
-                state:'thirdparty.baiduueditor',
-                label:'百度UEditor',
-                authors: ['zxsoft'],
-                progress: 60
-            }
-        ]
-    }
+  },
+  {
+    label: '第三方组件',
+    items: [
+      {
+        state: 'thirdparty.baiduueditor',
+        label: '百度UEditor',
+        authors: ['zxsoft'],
+        progress: 60
+      }
+    ]
+  }
 
 ]);
