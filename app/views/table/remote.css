@@ -1,0 +1,21 @@
+table thead th {
+  cursor: default;
+}
+table thead th.sortable {
+  cursor: pointer;
+}
+.relative {
+  position: relative;
+}
+
+.relative .popover {
+  width: 200px;
+}
+
+.pagination-sm {
+  margin: 0;
+}
+
+.global-search {
+  margin-bottom: 20px;
+}

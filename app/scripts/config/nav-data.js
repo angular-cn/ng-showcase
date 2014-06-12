@@ -155,7 +155,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'table.remote',
-        label: '后端综合'
+        label: '后端综合',
+        authors: ['雪狼'],
+        progress: 10
       },
       {
         state: 'table.frozen',
