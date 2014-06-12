@@ -6,10 +6,10 @@
 <!--[if IE 8]>
 <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js"> <!--<![endif]-->
+<html class="no-js" ng-app="ngShowcaseApp"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title ng-bind="config.title">Angular范例程序</title>
     <meta name="fragment" content="!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
@@ -20,16 +20,16 @@
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css"/>
-    <link rel="stylesheet" href="bower_components/select2/select2.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css" />
+    <link rel="stylesheet" href="bower_components/select2/select2.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
-<body ng-app="ngShowcaseApp">
+<body>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -109,6 +109,7 @@
 
 <script src="lib/angular-locale_zh-cn.js" charset="utf-8"></script>
 <script src="lib/ui-bootstrap-locale_zh-cn.js" charset="utf-8"></script>
+<script src="scripts/config/config.js" charset="utf-8"></script>
 <script src="scripts/config/authors.js" charset="utf-8"></script>
 <script src="scripts/config/nav-data.js" charset="utf-8"></script>
 <script src="scripts/config/city-data.js" charset="utf-8"></script>
