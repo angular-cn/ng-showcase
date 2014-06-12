@@ -19,7 +19,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
             },
             {
                 state: 'home.contact',
-                label: '联系我们',
+                label: '关注我们',
                 authors: ['ngShowcase'],
                 progress: 80
             }
