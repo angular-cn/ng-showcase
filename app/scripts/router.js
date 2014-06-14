@@ -1,6 +1,6 @@
 angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvider, NavData) {
-  $urlRouterProvider.when('', '/home/main');
-  $urlRouterProvider.when('/', '/home/main');
+  $urlRouterProvider.when('', '/home/home');
+  $urlRouterProvider.when('/', '/home/home');
   $urlRouterProvider.otherwise('/notFound');
   $stateProvider.state('notFound', {
     url: '/notFound',
