@@ -11,8 +11,10 @@ Angular范例集
 
 1. clone下去之后，请先确保有node环境，然后执行npm install和bower install命令，以便对grunt环境进行初始化。
 之后就可以用grunt serve来启动服务器进行查看和调试了。
-2. 如果使用windows系统，请务必在提交更改前用下列命令配置git： git config core.autocrlf input 我们统一使用unix的行结尾风格提交，以免不必要的冲突。
-3. 如果要参与开发，请先看看本项目的wiki，我会把一些开发中的注意事项随时放在里面。
+2. 如果使用windows系统，请务必在提交更改前用下列命令配置git： git config core.autocrlf input 我们统一使用unix的行结尾风格提交，以免出现不必要的修改。
+3. 建议修改前先调用git pull --rebase拉取一下远端代码，以免出现不必要的冲突。
+4. 请把所有文件中的缩进都设置为2空格，以免出现不必要的修改。
+5. 如果要参与开发，请先看看本项目的wiki，我会把一些开发中的注意事项随时放在里面。
 
 总体原则
 ------------
