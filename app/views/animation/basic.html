@@ -1,25 +1,22 @@
 <link rel="stylesheet" href="views/animation/basic.css"/>
-<fieldset>
-  <legend>基本动画</legend>
-  <ul class="list-group">
-    <li class="list-group-item repeat" ng-repeat="item in vm.items">
-      {{item}}
-      <button type="button" class="close" ng-click="vm.delItem($index)">&times;</button>
-    </li>
-  </ul>
-  <button class="btn btn-default mmm" ng-click="vm.addItem()">添加一条</button>
-</fieldset>
 
-<fieldset>
-  <legend>说明</legend>
-  <ul>
-    <li>
-      采用了Angular官方的动画模块，本例中仅演示了最基础的两个动画，具体信息以及参数请参考
-      <a href="http://www.ngnice.com/docs/guide/animations" target="_blank">官方文档</a>
-      。
-    </li>
-    <li>
-      通过ng-repeat中的ng-enter和ng-leave动画钩子来触发基本的CSS Transition动画,还可使用CSS Keyframe或Javascript来实现动画。
-    </li>
-  </ul>
-</fieldset>
+<ul class="list-group">
+  <li class="list-group-item repeat" ng-repeat="item in vm.items">
+    {{item}}
+    <button type="button" class="close" ng-click="vm.delItem($index)">&times;</button>
+  </li>
+</ul>
+<button class="btn btn-default mmm" ng-click="vm.addItem()">添加一条</button>
+
+
+<h3>说明</h3>
+<ul>
+  <li>
+    采用了Angular官方的动画模块，本例中仅演示了最基础的两个动画，具体信息以及参数请参考
+    <a href="http://www.ngnice.com/docs/guide/animations" target="_blank">官方文档</a>
+    。
+  </li>
+  <li>
+    通过ng-repeat中的ng-enter和ng-leave动画钩子来触发基本的CSS Transition动画,还可使用CSS Keyframe或Javascript来实现动画。
+  </li>
+</ul>

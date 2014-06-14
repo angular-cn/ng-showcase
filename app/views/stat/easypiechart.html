@@ -1,27 +1,24 @@
-<link rel="stylesheet" href="views/stat/easypiechart.css" />
-<fieldset>
-    <legend>Demo</legend>
-    <div class="chart" easypiechart options="vm.options[0]" percent="vm.percent">
-        <span class="percent" ng-bind="vm.percent"></span>
-    </div>
+<link rel="stylesheet" href="views/stat/easypiechart.css"/>
+<div class="chart" easypiechart options="vm.options[0]" percent="vm.percent">
+  <span class="percent" ng-bind="vm.percent"></span>
+</div>
 
-    <div class="chart" easypiechart options="vm.options[1]" percent="vm.percent">
-        <span class="percent" ng-bind="vm.percent"></span>
-    </div>
+<div class="chart" easypiechart options="vm.options[1]" percent="vm.percent">
+  <span class="percent" ng-bind="vm.percent"></span>
+</div>
 
-    <div class="chart" easypiechart options="vm.options[2]" percent="vm.percent">
-        <span class="percent" ng-bind="vm.percent"></span>
-    </div>
+<div class="chart" easypiechart options="vm.options[2]" percent="vm.percent">
+  <span class="percent" ng-bind="vm.percent"></span>
+</div>
 
-    <label>
-        <input type="range" min="0" max="100" step="1" ng-model="vm.percent" />
-    </label>
-    <div>目前百分比为：{{vm.percent}}% <a class="btn btn-primary" ng-click="vm.randomMath()">随机测试</a></div>
-    <blockquote>注意事项:使用前必须引入 easypiechart,官方暂时没有支持bower的插件安装支持 可以先用我的tag:"angular.easy-pie-chart": "2.1.5-angular"</blockquote>
-
-        <code>
-            angular.module('app', ['easypiechart'])
-        </code>
-
-</fieldset>
-
+<label>
+  <input type="range" min="0" max="100" step="1" ng-model="vm.percent"/>
+</label>
+<div>目前百分比为：{{vm.percent}}% <a class="btn btn-primary" ng-click="vm.randomMath()">随机测试</a></div>
+<h3>说明</h3>
+<div class="alert alert-info">
+注意事项:使用前必须引入 easypiechart,官方暂时没有支持bower的插件安装支持 可以先用我的tag:"angular.easy-pie-chart": "2.1.5-angular"
+<code>
+  angular.module('app', ['easypiechart'])
+</code>
+</div>

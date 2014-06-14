@@ -1,31 +1,30 @@
-<link rel="stylesheet" href="views/tree/basic.css" />
-<fieldset>
-  <legend>Demo</legend>
-  <div class="tree">
-    <ul>
-      <li ng-repeat="country in vm.countries" ng-class="{closed:country.closed}">
-        <div ng-click="country.closed=!country.closed">
-          <span class="glyphicon" ng-class="country.closed?'glyphicon-plus':'glyphicon-minus'"></span>
-          <img ng-src="images/{{country.flag}}"/>
-          {{country.label}}
-        </div>
-        <ul ng-class="{hidden: country.closed}">
-          <li ng-repeat="province in country.provinces" ng-class="{closed:province.closed}">
-            <div ng-click="province.closed=!province.closed">
-              <span class="glyphicon" ng-class="province.closed?'glyphicon-plus':'glyphicon-minus'"></span>
-              {{province.label}}
-            </div>
-            <ul ng-class="{hidden: province.closed}">
-              <li ng-repeat="city in province.cities" ng-click="vm.select(country, province, city)">
-                {{city.label}}
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-  <div ng-if="vm.city">国家：<img ng-src="images/{{vm.country.flag}}">{{vm.country.label}} 省份：{{vm.province.label}}
-    城市：{{vm.city.label}}
-  </div>
-</fieldset>
+<link rel="stylesheet" href="views/tree/basic.css"/>
+
+<div class="tree">
+  <ul>
+    <li ng-repeat="country in vm.countries" ng-class="{closed:country.closed}">
+      <div ng-click="country.closed=!country.closed">
+        <span class="glyphicon" ng-class="country.closed?'glyphicon-plus':'glyphicon-minus'"></span>
+        <img ng-src="images/{{country.flag}}"/>
+        {{country.label}}
+      </div>
+      <ul ng-class="{hidden: country.closed}">
+        <li ng-repeat="province in country.provinces" ng-class="{closed:province.closed}">
+          <div ng-click="province.closed=!province.closed">
+            <span class="glyphicon" ng-class="province.closed?'glyphicon-plus':'glyphicon-minus'"></span>
+            {{province.label}}
+          </div>
+          <ul ng-class="{hidden: province.closed}">
+            <li ng-repeat="city in province.cities" ng-click="vm.select(country, province, city)">
+              {{city.label}}
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div ng-if="vm.city">国家：<img ng-src="images/{{vm.country.flag}}">{{vm.country.label}} 省份：{{vm.province.label}}
+  城市：{{vm.city.label}}
+</div>
+

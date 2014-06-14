@@ -1,45 +1,52 @@
 <link rel="stylesheet" href="views/integrated/cart.css"/>
-<fieldset>
-  <legend>商品列表 / 购物车</legend>
-  <div class="row">
-    <div class="col-sm-6 col-md-6" ng-repeat="item in vm.items">
-      <div class="thumbnail">
-        <img ng-src="images/{{item.thumbnail}}" alt="{{item.label}}">
-        <div class="caption">
-          <h3>{{item.label}}<small>{{item.code}}</small></h3>
-          <div class="items-details">{{item.description}}</div>
-          <p class="text-right">
-            <span class="btn btn-primary btn-sm" role="button" ng-click="vm.addToCart(item)" title="加入购物车"><i class="glyphicon glyphicon-shopping-cart"></i></span>
-            <span class="btn btn-warning btn-sm" role="button" ng-click="vm.buy(item)" title="直接购买当前商品">立即购买</span>
-          </p>
-        </div>
+
+<h4>商品列表 / 购物车</h4>
+<div class="row">
+  <div class="col-sm-6 col-md-6" ng-repeat="item in vm.items">
+    <div class="thumbnail">
+      <img ng-src="images/{{item.thumbnail}}" alt="{{item.label}}">
+
+      <div class="caption">
+        <h3>{{item.label}}
+          <small>{{item.code}}</small>
+        </h3>
+        <div class="items-details">{{item.description}}</div>
+        <p class="text-right">
+          <span class="btn btn-primary btn-sm" role="button" ng-click="vm.addToCart(item)" title="加入购物车"><i
+              class="glyphicon glyphicon-shopping-cart"></i></span>
+          <span class="btn btn-warning btn-sm" role="button" ng-click="vm.buy(item)" title="直接购买当前商品">立即购买</span>
+        </p>
       </div>
     </div>
   </div>
-</fieldset>
-<fieldset>
-  <legend>{{vm.cart.label}}(共{{vm.cartCount()}}件 总计 {{vm.cartTotal()}} 元)</legend>
-  <div class="alert alert-info" ng-if="!vm.cart.lines.length">请先添加商品</div>
-  <table class="table table-bordered table-hover" ng-if="vm.cart.lines.length > 0">
-    <thead>
-    <tr>
-      <th>产品编号</th>
-      <th>产品名称</th>
-      <th>购买数量</th>
-      <th>操作</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="line in vm.cart.lines" ng-class="{removed: line.quantity <= 0}">
-      <td>{{line.code}}</td>
-      <td>{{line.label}}</td>
-      <td>
-        <span class="btn btn-primary btn-sm" ng-click="vm.decrementQuantity(line)"><i class="glyphicon glyphicon-minus"></i></span>
-        {{line.quantity}}
-        <span class="btn btn-primary btn-sm" ng-click="vm.incrementQuantity(line)"><i class="glyphicon glyphicon-plus"></i></span>
-      </td>
-      <td><span class="btn btn-primary" ng-click="vm.removeFromCart(line)"><i class="glyphicon glyphicon-remove"></i>移除</span></td>
-    </tr>
-    </tbody>
-  </table>
-</fieldset>
+</div>
+
+
+<h4>{{vm.cart.label}}(共{{vm.cartCount()}}件 总计 {{vm.cartTotal()}} 元)</h4>
+<div class="alert alert-info" ng-if="!vm.cart.lines.length">请先添加商品</div>
+<table class="table table-bordered table-hover" ng-if="vm.cart.lines.length > 0">
+  <thead>
+  <tr>
+    <th>产品编号</th>
+    <th>产品名称</th>
+    <th>购买数量</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="line in vm.cart.lines" ng-class="{removed: line.quantity <= 0}">
+    <td>{{line.code}}</td>
+    <td>{{line.label}}</td>
+    <td>
+      <span class="btn btn-primary btn-sm" ng-click="vm.decrementQuantity(line)"><i
+          class="glyphicon glyphicon-minus"></i></span>
+      {{line.quantity}}
+      <span class="btn btn-primary btn-sm" ng-click="vm.incrementQuantity(line)"><i
+          class="glyphicon glyphicon-plus"></i></span>
+    </td>
+    <td><span class="btn btn-primary" ng-click="vm.removeFromCart(line)"><i
+        class="glyphicon glyphicon-remove"></i>移除</span></td>
+  </tr>
+  </tbody>
+</table>
+

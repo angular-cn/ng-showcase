@@ -1,39 +1,38 @@
-<link rel="stylesheet" href="views/tree/treeData.css" />
-<fieldset>
-  <legend>TreeData范例</legend>
-  <div class="tree">
-    <ul>
-      <li ng-repeat="country in vm.countries" ng-class="{closed:vm.tree.isFolded(country)}">
-        <div>
-          <input type="checkbox" ng-model="country.checked" ng-change="vm.tree.check(country, country.checked)" ng-class="{intermediate: vm.tree.isSemiChecked(country)}"/>
+<link rel="stylesheet" href="views/tree/treeData.css"/>
+<div class="tree">
+  <ul>
+    <li ng-repeat="country in vm.countries" ng-class="{closed:vm.tree.isFolded(country)}">
+      <div>
+        <input type="checkbox" ng-model="country.checked" ng-change="vm.tree.check(country, country.checked)"
+               ng-class="{intermediate: vm.tree.isSemiChecked(country)}"/>
           <span ng-click="vm.tree.toggleFold(country)">
             <span class="glyphicon" ng-class="vm.tree.isFolded(country)?'glyphicon-plus':'glyphicon-minus'"></span>
             <img ng-src="images/{{country.flag}}"/>
             {{country.label}}
           </span>
-        </div>
-        <ul ng-class="{hidden: vm.tree.isFolded(country)}">
-          <li ng-repeat="province in country.items" ng-class="{closed:vm.tree.isFolded(province)}">
-            <input type="checkbox" ng-model="province.checked" ng-change="vm.tree.check(province, province.checked)" ng-class="{intermediate: vm.tree.isSemiChecked(province)}"/>
+      </div>
+      <ul ng-class="{hidden: vm.tree.isFolded(country)}">
+        <li ng-repeat="province in country.items" ng-class="{closed:vm.tree.isFolded(province)}">
+          <input type="checkbox" ng-model="province.checked" ng-change="vm.tree.check(province, province.checked)"
+                 ng-class="{intermediate: vm.tree.isSemiChecked(province)}"/>
             <span ng-click="vm.tree.toggleFold(province)">
               <span class="glyphicon" ng-class="vm.tree.isFolded(province)?'glyphicon-plus':'glyphicon-minus'"></span>
               {{province.label}}
             </span>
-            <ul ng-class="{hidden: vm.tree.isFolded(province)}">
-              <li ng-repeat="city in province.items">
-                <label>
-                  <input type="checkbox" ng-model="city.checked" ng-change="vm.tree.check(city, city.checked)"/>
-                  {{city.label}}
-                </label>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  这是一个使用内部数据结构来封装级联逻辑的版本，相比directive来说，这种内部数据结构更容易测试，内聚性也更强。
-</fieldset>
+          <ul ng-class="{hidden: vm.tree.isFolded(province)}">
+            <li ng-repeat="city in province.items">
+              <label>
+                <input type="checkbox" ng-model="city.checked" ng-change="vm.tree.check(city, city.checked)"/>
+                {{city.label}}
+              </label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+
+<h3>说明</h3>
+这是一个使用内部数据结构来封装级联逻辑的版本，相比directive来说，这种内部数据结构更容易测试，内聚性也更强。

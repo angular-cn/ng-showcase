@@ -6,22 +6,24 @@ angular.module('ngShowcaseApp').constant('NavData', [
     label: '首页',
     items: [
       {
-        state: 'home.main',
+        state: 'home.home',
         label: '首页',
+        description: 'Angular showcase!',
         authors: ['ngShowcase'],
-        progress: 40
+        progress: 100
       },
       {
         state: 'home.about',
         label: '关于',
+        description: '关于ngShowcase开发组',
         authors: ['ngShowcase'],
-        progress: 80
+        progress: 100
       },
       {
         state: 'home.contact',
         label: '关注我们',
         authors: ['ngShowcase'],
-        progress: 80
+        progress: 100
       }
     ]
   },
@@ -150,12 +152,14 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'table.local',
         label: '前端综合',
+        description: "前端实现：分页/排序/过滤/就地编辑",
         authors: ['雪狼'],
         progress: 100
       },
       {
         state: 'table.remote',
         label: '后端综合',
+        description: "后端实现：分页/排序/过滤/就地编辑",
         authors: ['雪狼'],
         progress: 10
       },

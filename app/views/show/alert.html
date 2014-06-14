@@ -1,30 +1,26 @@
-<fieldset>
-  <legend>警告框</legend>
-    <div ng-repeat="alert in vm.alerts" ng-class="['alert', 'alert-dismissable', alert.type]">
-      <button type="button" class="close" ng-click="vm.closeAlert($index)">&times;</button>
-      {{alert.msg}}
-    </div>
-  <div class="form-group">
-    <label>警告类型</label>
-    <select class="form-control" ng-model="vm.type" ng-options="type for type in vm.types" required>
-      <option value="">-- 请选择类型 --</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label>警告内容</label>
-    <input type="text" class="form-control" ng-model="vm.msg" required />
-  </div>
-  <button class="btn btn-default" ng-click="vm.addAlert(vm.type,vm.msg)">添加警告</button>
-</fieldset>
+<div ng-repeat="alert in vm.alerts" ng-class="['alert', 'alert-dismissable', alert.type]">
+  <button type="button" class="close" ng-click="vm.closeAlert($index)">&times;</button>
+  {{alert.msg}}
+</div>
+<div class="form-group">
+  <label>警告类型</label>
+  <select class="form-control" ng-model="vm.type" ng-options="type for type in vm.types" required>
+    <option value="">-- 请选择类型 --</option>
+  </select>
+</div>
+<div class="form-group">
+  <label>警告内容</label>
+  <input type="text" class="form-control" ng-model="vm.msg" required/>
+</div>
+<button class="btn btn-default" ng-click="vm.addAlert(vm.type,vm.msg)">添加警告</button>
 
-<fieldset>
-  <legend>说明</legend>
-  <ul>
-    <li>使用bootstrap的内置样式和指令完成的警告框控件</li>
-    <li>
-      还可采用来自angular-bootstrap封装的指令，请参考
-      <a href="http://angular-ui.github.io/bootstrap/" target="_blank">官方Demo</a>
-      。
-    </li>
-  </ul>
-</fieldset>
+
+<h3>说明</h3>
+<ul>
+  <li>使用bootstrap的内置样式和指令完成的警告框控件</li>
+  <li>
+    还可采用来自angular-bootstrap封装的指令，请参考
+    <a href="http://angular-ui.github.io/bootstrap/" target="_blank">官方Demo</a>
+    。
+  </li>
+</ul>

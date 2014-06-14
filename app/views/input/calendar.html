@@ -1,52 +1,52 @@
-<fieldset>
-  <legend>日历</legend>
-  <pre>选中的日期: <strong>{{vm.calendar | date:'fullDate' }}</strong></pre>
+<pre>选中的日期: <strong>{{vm.calendar | date:'fullDate' }}</strong></pre>
 
-  <h4>普通样式</h4>
-  <div style="display:inline-block; min-height:290px;">
-    <datepicker ng-model="vm.calendar" min-date="vm.minDate" show-weeks="true" format-day-title="yyyy MMMM" class="well well-sm"></datepicker>
-  </div>
+<h4>普通样式</h4>
+<div style="display:inline-block; min-height:290px;">
+  <datepicker ng-model="vm.calendar" min-date="vm.minDate" show-weeks="true" format-day-title="yyyy MMMM"
+              class="well well-sm"></datepicker>
+</div>
 
-  <h4>弹出样式</h4>
-  <div class="row">
-    <div class="col-md-6">
-      <p class="input-group">
-        <input type="text" class="form-control" datepicker-popup="{{vm.format}}" ng-model="vm.calendar" is-open="vm.opened" min-date="vm.minDate" max-date="'2015-06-22'" datepicker-options="vm.dateOptions" date-disabled="vm.disabled(date, mode)" ng-required="true" close-text="关闭" />
+<h4>弹出样式</h4>
+<div class="row">
+  <div class="col-md-6">
+    <p class="input-group">
+      <input type="text" class="form-control" datepicker-popup="{{vm.format}}" ng-model="vm.calendar"
+             is-open="vm.opened" min-date="vm.minDate" max-date="'2015-06-22'" datepicker-options="vm.dateOptions"
+             date-disabled="vm.disabled(date, mode)" ng-required="true" close-text="关闭"/>
         <span class="input-group-btn">
-          <button type="button" class="btn btn-default" ng-click="vm.open($event)"> <i class="glyphicon glyphicon-calendar"></i>
+          <button type="button" class="btn btn-default" ng-click="vm.open($event)"><i
+              class="glyphicon glyphicon-calendar"></i>
           </button>
         </span>
-      </p>
-    </div>
+    </p>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <label>格式:</label>
-      <select class="form-control" ng-model="vm.format" ng-options="f for f in vm.formats">
-        <option></option>
-      </select>
-    </div>
+<div class="row">
+  <div class="col-md-6">
+    <label>格式:</label>
+    <select class="form-control" ng-model="vm.format" ng-options="f for f in vm.formats">
+      <option></option>
+    </select>
   </div>
-  <hr/>
+</div>
+<hr/>
 
-  <button type="button" class="btn btn-sm btn-info" ng-click="vm.today()">选中今天</button>
-  <button type="button" class="btn btn-sm btn-default" ng-click="vm.calendar = '2014-05-14'">2014-05-14</button>
-  <button type="button" class="btn btn-sm btn-danger" ng-click="vm.clear()">清空</button>
-  <button type="button" class="btn btn-sm btn-default" ng-click="vm.toggleMin()" tooltip="是否允许选择当前日期之前的日期">最小日期</button>
-</fieldset>
+<button type="button" class="btn btn-sm btn-info" ng-click="vm.today()">选中今天</button>
+<button type="button" class="btn btn-sm btn-default" ng-click="vm.calendar = '2014-05-14'">2014-05-14</button>
+<button type="button" class="btn btn-sm btn-danger" ng-click="vm.clear()">清空</button>
+<button type="button" class="btn btn-sm btn-default" ng-click="vm.toggleMin()" tooltip="是否允许选择当前日期之前的日期">最小日期</button>
 
-<fieldset>
-  <legend>说明</legend>
-  <ul>
-    <li>
-      来自angular-bootstrap的第三方日历控件，更多功能和设置请参考
-      <a href="http://angular-ui.github.io/bootstrap/" target="_blank">官方Demo</a>。
-    </li>
-    <li>
-      日期输出格式使用了官方的Date过滤器，
-      <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">查看更多</a>。
-    </li>
-    <li>本页翻译自其官方Demo。</li>
-  </ul>
-</fieldset>
+
+<h3>说明</h3>
+<ul>
+  <li>
+    来自angular-bootstrap的第三方日历控件，更多功能和设置请参考
+    <a href="http://angular-ui.github.io/bootstrap/" target="_blank">官方Demo</a>。
+  </li>
+  <li>
+    日期输出格式使用了官方的Date过滤器，
+    <a href="https://docs.angularjs.org/api/ng/filter/date" target="_blank">查看更多</a>。
+  </li>
+  <li>本页翻译自其官方Demo。</li>
+</ul>

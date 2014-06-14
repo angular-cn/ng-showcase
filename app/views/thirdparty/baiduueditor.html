@@ -1,20 +1,19 @@
-<fieldset>
-  <legend>百度UEditor</legend>
-  <ueditor config="editorConfig" ng-model="content">
-    <p><span style="font-size: 36px;">大字</span><span style="color: rgb(255, 0, 0);">颜色</span></p>
+<ueditor config="editorConfig" ng-model="content">
+  <p><span style="font-size: 36px;">大字</span><span style="color: rgb(255, 0, 0);">颜色</span></p>
 
-    <p>来点动画试试<img src="http://img.baidu.com/hi/jx2/j_0013.gif"/></p>
+  <p>来点动画试试<img src="http://img.baidu.com/hi/jx2/j_0013.gif"/></p>
 
-  </ueditor>
+</ueditor>
 
-</fieldset>
-<fieldset>
-  <legend>双向绑定内容（纯代码）</legend>
-  <textarea class="form-control" id="" cols="80" rows="10" ng-model="content">
 
-  </textarea>
-</fieldset>
-<fieldset>
-  <legend>预览</legend>
-  <div ng-bind-html="html"></div>
-</fieldset>
+<h4>双向绑定内容（纯代码）</h4>
+<textarea class="form-control" id="" cols="80" rows="10" ng-model="content">
+
+</textarea>
+
+
+<h4>预览</h4>
+<div ng-bind-html="html"></div>
+
+<h3>说明</h3>
+这是基于百度的ueditor库封装出来的HTML编辑器，ueditor官方网站在：<a href="http://ueditor.baidu.com/" target="_blank">http://ueditor.baidu.com/</a>

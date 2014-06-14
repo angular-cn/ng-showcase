@@ -1,9 +1,11 @@
 table thead th {
   cursor: default;
 }
+
 table thead th.sortable {
   cursor: pointer;
 }
+
 .relative {
   position: relative;
 }

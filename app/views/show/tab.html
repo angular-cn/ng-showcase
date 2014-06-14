@@ -1,22 +1,22 @@
 <link rel="stylesheet" href="views/show/tab.css"/>
-<fieldset>
-  <legend>页标签</legend>
-  <div>
-    <ul class="nav nav-tabs" ng-init="vm.activeTab=1">
-      <li ng-class="{active: vm.activeTab == 1}"><a href="javascript:;" ng-click="vm.activeTab = 1">标签1</a></li>
-      <li ng-class="{active: vm.activeTab == 2}"><a href="javascript:;" ng-click="vm.activeTab = 2">标签2</a></li>
-    </ul>
-    <div class="tab-content tab-bordered">
-      <div class="tab-panel" ng-show="vm.activeTab == 1">
-        标签1的内容
-      </div>
-      <div class="tab-panel" ng-show="vm.activeTab == 2">
-        标签2的内容
-      </div>
+
+<div>
+  <ul class="nav nav-tabs" ng-init="vm.activeTab=1">
+    <li ng-class="{active: vm.activeTab == 1}"><a href="javascript:;" ng-click="vm.activeTab = 1">标签1</a></li>
+    <li ng-class="{active: vm.activeTab == 2}"><a href="javascript:;" ng-click="vm.activeTab = 2">标签2</a></li>
+  </ul>
+  <div class="tab-content tab-bordered">
+    <div class="tab-panel" ng-show="vm.activeTab == 1">
+      标签1的内容
+    </div>
+    <div class="tab-panel" ng-show="vm.activeTab == 2">
+      标签2的内容
     </div>
   </div>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  这里演示的是直接通过bootstrap实现的方法。<hr/>还可以通过angular-bootstrap的tabset指令实现，参见 <a href="http://angular-ui.github.io/bootstrap/#/tabs" target="_blank">官方Demo</a>
-</fieldset>
+</div>
+
+
+<h3>说明</h3>
+这里演示的是直接通过bootstrap实现的方法。
+<hr/>还可以通过angular-bootstrap的tabset指令实现，参见 <a href="http://angular-ui.github.io/bootstrap/#/tabs"
+                                             target="_blank">官方Demo</a>

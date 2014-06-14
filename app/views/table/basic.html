@@ -1,50 +1,48 @@
-<fieldset>
-  <legend>基本表格/数据类型</legend>
-  <table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-      <th rowspan="2"><input type="checkbox" ng-model="vm.allChecked" ng-change="vm.checkAll(vm.allChecked)"/></th>
-      <th rowspan="2">姓名</th>
-      <th colspan="3">详情</th>
-      <th rowspan="2">操作</th>
-    </tr>
-    <tr>
-      <th>粉丝数</th>
-      <th>生日</th>
-      <th>收入</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="item in vm.items">
-      <td><input type="checkbox" ng-model="item.$checked" /></td>
-      <td>{{item.name}}</td>
-      <td class="text-right">{{item.followers|number}}</td>
-      <td>{{item.birthday|date}} ({{vm.age(item.birthday)}}岁)</td>
-      <td class="text-right">{{item.income|currency}}</td>
-      <td class="dropdown">
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th rowspan="2"><input type="checkbox" ng-model="vm.allChecked" ng-change="vm.checkAll(vm.allChecked)"/></th>
+    <th rowspan="2">姓名</th>
+    <th colspan="3">详情</th>
+    <th rowspan="2">操作</th>
+  </tr>
+  <tr>
+    <th>粉丝数</th>
+    <th>生日</th>
+    <th>收入</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="item in vm.items">
+    <td><input type="checkbox" ng-model="item.$checked"/></td>
+    <td>{{item.name}}</td>
+    <td class="text-right">{{item.followers|number}}</td>
+    <td>{{item.birthday|date}} ({{vm.age(item.birthday)}}岁)</td>
+    <td class="text-right">{{item.income|currency}}</td>
+    <td class="dropdown">
         <span class="btn btn-primary btn-xs dropdown-toggle" data-toggle="toggle" title="点此查看详情"><i
             class="glyphicon glyphicon-comment"></i></span>
 
-        <div class="dropdown-menu panel-body">
-          <fieldset>
-            <legend>{{item.id}} - {{item.name}}</legend>
-            粉丝：{{item.followers|number}}<br/>
-            生日：{{item.birthday|date}}<br/>
-            年龄：{{vm.age(item.birthday)}}岁<br/>
-            收入：{{item.income|currency}}
-          </fieldset>
-        </div>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-  <div> 选中的项：<br/>
-    <label class="label label-success" ng-repeat-start="item in vm.selection()">{{item.name}}</label><span ng-if="!$last && $index % 5 !== 4">,</span><br ng-repeat-end ng-if="$index % 5 === 4"/>
-  </div>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  请注意：angular的活动binding（比如$watch, <span ng-non-bindable>{{}}</span>表达式，ng-bind等）数量应避免超过2000个，否则在老版本ie等浏览器上会导致性能急剧下降。
-  <hr/>
-  解决大表数据问题的方法请参见<a ui-sref="table.virtual()">百万行大表</a>
-</fieldset>
+      <div class="dropdown-menu panel-body">
+
+        <h3>{{item.id}} - {{item.name}}</h3>
+        粉丝：{{item.followers|number}}<br/>
+        生日：{{item.birthday|date}}<br/>
+        年龄：{{vm.age(item.birthday)}}岁<br/>
+        收入：{{item.income|currency}}
+
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div> 选中的项：<br/>
+  <label class="label label-success" ng-repeat-start="item in vm.selection()">{{item.name}}</label><span
+      ng-if="!$last && $index % 5 !== 4">,</span><br ng-repeat-end ng-if="$index % 5 === 4"/>
+</div>
+
+
+<h3>说明</h3>
+请注意：angular的活动binding（比如$watch, <span ng-non-bindable>{{}}</span>表达式，ng-bind等）数量应避免超过2000个，否则在老版本ie等浏览器上会导致性能急剧下降。
+<hr/>
+解决大表数据问题的方法请参见<a ui-sref="table.virtual()">百万行大表</a>

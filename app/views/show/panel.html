@@ -1,23 +1,21 @@
-<fieldset>
-  <legend>分组框/可折叠面板</legend>
-  <div class="panel panel-default" ng-class="{hidden: vm.hidden}">
-    <div class="panel-heading">
-      <h4 class="panel-title">
-        <span class="glyphicon glyphicon-th-list"></span>
-        点右侧的图标折叠/展开
+<div class="panel panel-default" ng-class="{hidden: vm.hidden}">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <span class="glyphicon glyphicon-th-list"></span>
+      点右侧的图标折叠/展开
       <span class="pull-right">
       <span class="glyphicon" ng-class="vm.collapsed?'glyphicon-chevron-down':'glyphicon-chevron-up'"
             ng-click="vm.collapsed = !vm.collapsed"></span>
         &nbsp;
       <span class="glyphicon glyphicon-remove" ng-click="vm.hidden = true"></span>
       </span>
-      </h4>
-    </div>
-    <div class="panel-collapse collapse" ng-class="{in: !vm.collapsed}">
-      <div class="panel-body">
-        可折叠内容
-      </div>
+    </h4>
+  </div>
+  <div class="panel-collapse collapse" ng-class="{in: !vm.collapsed}">
+    <div class="panel-body">
+      可折叠内容
     </div>
   </div>
-  <span class="btn btn-primary" ng-click="vm.hidden = false" ng-if="vm.hidden">重新显示</span>
-</fieldset>
+</div>
+<span class="btn btn-primary" ng-click="vm.hidden = false" ng-if="vm.hidden">重新显示</span>
+

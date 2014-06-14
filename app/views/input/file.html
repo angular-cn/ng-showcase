@@ -1,93 +1,92 @@
-<fieldset>
-  <legend>文件上传</legend>
-  <div ng-show="vm.uploader.isHTML5" class="row">
-    <div class="well col-md-6" ng-file-over>
-      使用基础设定的拖放区
-    </div>
+<div ng-show="vm.uploader.isHTML5" class="row">
+  <div class="well col-md-6" ng-file-over>
+    使用基础设定的拖放区
+  </div>
 
-    <div class="well col-md-6" ng-file-drop="{ url: '/foo' }" ng-file-over="another-file-over-class">
-      使用高级设定的拖放区
-    </div>
+  <div class="well col-md-6" ng-file-drop="{ url: '/foo' }" ng-file-over="another-file-over-class">
+    使用高级设定的拖放区
   </div>
-  <div class="row">
-    <div class="col-md-6">
-      单文件：<input ng-file-select type="file"/>
-    </div>
-    <div class="col-md-6">
-      多文件：<input ng-file-select type="file" multiple/><br/>
-    </div>
+</div>
+<div class="row">
+  <div class="col-md-6">
+    单文件：<input ng-file-select type="file"/>
   </div>
-  <h4>当前队列 ({{ vm.uploader.queue.length }})</h4>
-  <table class="table">
-    <thead>
-    <tr>
-      <th width="50%">文件名</th>
-      <th ng-show="vm.uploader.isHTML5">大小</th>
-      <th ng-show="vm.uploader.isHTML5">进度</th>
-      <th>状态</th>
-      <th>操作</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr ng-repeat="item in vm.uploader.queue">
-      <td><strong>{{ item.file.name }}</strong></td>
-      <td ng-show="vm.uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
-      <td ng-show="vm.uploader.isHTML5">
-        <div class="progress" style="margin-bottom: 0;">
-          <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
-        </div>
-      </td>
-      <td class="text-center">
-        <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
-        <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
-        <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
-      </td>
-      <td nowrap>
-        <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()"
-                ng-disabled="item.isReady || item.isUploading || item.isSuccess">
-          <span class="glyphicon glyphicon-upload"></span>
-        </button>
-        <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
-          <span class="glyphicon glyphicon-ban-circle"></span>
-        </button>
-        <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
-          <span class="glyphicon glyphicon-trash"></span>
-        </button>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-  <h5>上传进度:</h5>
-  <div class="progress" style="">
-    <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.uploader.progress + '%' }"></div>
+  <div class="col-md-6">
+    多文件：<input ng-file-select type="file" multiple/><br/>
   </div>
-  <div>
-    <button type="button" class="btn btn-success btn-s" ng-click="vm.uploader.uploadAll()"
-            ng-disabled="!vm.uploader.getNotUploadedItems().length">
-      <span class="glyphicon glyphicon-upload"></span> 全部上传
-    </button>
-    <button type="button" class="btn btn-warning btn-s" ng-click="vm.uploader.cancelAll()"
-            ng-disabled="!vm.uploader.isUploading">
-      <span class="glyphicon glyphicon-ban-circle"></span> 全部取消
-    </button>
-    <button type="button" class="btn btn-danger btn-s" ng-click="vm.uploader.clearQueue()"
-            ng-disabled="!vm.uploader.queue.length">
-      <span class="glyphicon glyphicon-trash"></span> 全部移除
-    </button>
-  </div>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  <ul>
-    <li>
-      这是一个第三方组件(module: angularFileUpload)，<a href="https://github.com/nervgh/angular-file-upload" target="_blank">点此查看</a>。
-      同时，官方的Demo还支持图片预览功能。
-    </li>
-    <li>
-      后端只要实现标准的文件上传接口即可。本范例中的后端接口只负责接收文件，并给出反馈，并不会进行实质性保存。
-    </li>
-    <li>
-      本页即翻译自其官方demo。
-    </li>
-  </ul>
-</fieldset>
+</div>
+<h4>当前队列 ({{ vm.uploader.queue.length }})</h4>
+<table class="table">
+  <thead>
+  <tr>
+    <th width="50%">文件名</th>
+    <th ng-show="vm.uploader.isHTML5">大小</th>
+    <th ng-show="vm.uploader.isHTML5">进度</th>
+    <th>状态</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="item in vm.uploader.queue">
+    <td><strong>{{ item.file.name }}</strong></td>
+    <td ng-show="vm.uploader.isHTML5" nowrap>{{ item.file.size/1024/1024|number:2 }} MB</td>
+    <td ng-show="vm.uploader.isHTML5">
+      <div class="progress" style="margin-bottom: 0;">
+        <div class="progress-bar" role="progressbar" ng-style="{ 'width': item.progress + '%' }"></div>
+      </div>
+    </td>
+    <td class="text-center">
+      <span ng-show="item.isSuccess"><i class="glyphicon glyphicon-ok"></i></span>
+      <span ng-show="item.isCancel"><i class="glyphicon glyphicon-ban-circle"></i></span>
+      <span ng-show="item.isError"><i class="glyphicon glyphicon-remove"></i></span>
+    </td>
+    <td nowrap>
+      <button type="button" class="btn btn-success btn-xs" ng-click="item.upload()"
+              ng-disabled="item.isReady || item.isUploading || item.isSuccess">
+        <span class="glyphicon glyphicon-upload"></span>
+      </button>
+      <button type="button" class="btn btn-warning btn-xs" ng-click="item.cancel()" ng-disabled="!item.isUploading">
+        <span class="glyphicon glyphicon-ban-circle"></span>
+      </button>
+      <button type="button" class="btn btn-danger btn-xs" ng-click="item.remove()">
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<h5>上传进度:</h5>
+<div class="progress" style="">
+  <div class="progress-bar" role="progressbar" ng-style="{ 'width': vm.uploader.progress + '%' }"></div>
+</div>
+<div>
+  <button type="button" class="btn btn-success btn-s" ng-click="vm.uploader.uploadAll()"
+          ng-disabled="!vm.uploader.getNotUploadedItems().length">
+    <span class="glyphicon glyphicon-upload"></span> 全部上传
+  </button>
+  <button type="button" class="btn btn-warning btn-s" ng-click="vm.uploader.cancelAll()"
+          ng-disabled="!vm.uploader.isUploading">
+    <span class="glyphicon glyphicon-ban-circle"></span> 全部取消
+  </button>
+  <button type="button" class="btn btn-danger btn-s" ng-click="vm.uploader.clearQueue()"
+          ng-disabled="!vm.uploader.queue.length">
+    <span class="glyphicon glyphicon-trash"></span> 全部移除
+  </button>
+</div>
+
+
+<h3>说明</h3>
+<ul>
+  <li>
+    这是一个第三方组件(module: angularFileUpload)，<a href="https://github.com/nervgh/angular-file-upload"
+                                            target="_blank">点此查看</a>。
+    同时，官方的Demo还支持图片预览功能。
+  </li>
+  <li>
+    后端只要实现标准的文件上传接口即可。本范例中的后端接口只负责接收文件，并给出反馈，并不会进行实质性保存。
+  </li>
+  <li>
+    本页即翻译自其官方demo。
+  </li>
+</ul>
+

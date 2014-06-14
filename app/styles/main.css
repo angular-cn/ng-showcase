@@ -1,4 +1,7 @@
 /* Space out content a bit */
+h1,h2,h3 {
+  font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif,"宋体";
+}
 body {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -12,16 +15,31 @@ body {
 
 /* Custom page header */
 .header {
+  padding-bottom: 20px;
   border-bottom: 1px solid #e5e5e5;
 }
 /* Make the masthead heading the same height as the navigation */
-.header h3 {
+.header h1 {
+  font-size: 24px;
   margin-top: 0;
   margin-bottom: 0;
   line-height: 40px;
-  padding-bottom: 19px;
+}
+.header h1 a:hover {
+  text-decoration: none;
+}
+h2.brief {
+  font-size: 21px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 0 15px;
 }
 
+h3 {
+  font-size: 18px;
+  padding-bottom: 3px;
+  border-bottom: 1px dashed #e5e5e5;
+}
 /* Custom page footer */
 .footer {
   padding-top: 19px;

@@ -1,13 +1,12 @@
-<fieldset>
-  <legend>Typeahead/自动完成</legend>
-  <label>
-    敲a或c等字母试试：
-    <input type="text" ng-model="vm.selected" typeahead="state for state in vm.states | filter:$viewValue | limitTo:8" class="form-control">
-  </label>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  这里使用的是angular-bootstrap封装的组件，它同时还支持ajax数据源和自定义条目模板功能，具体用法请参见：
-  <a href="http://angular-ui.github.io/bootstrap/#typeahead" target="_blank">官方Demo</a>
-</fieldset>
+<label>
+  敲a或c等字母试试：
+  <input type="text" ng-model="vm.selected" typeahead="state for state in vm.states | filter:$viewValue | limitTo:8"
+         class="form-control">
+</label>
+
+
+<h3>说明</h3>
+这里使用的是angular-bootstrap封装的组件，它同时还支持ajax数据源和自定义条目模板功能，具体用法请参见：
+<a href="http://angular-ui.github.io/bootstrap/#typeahead" target="_blank">官方Demo</a>
+
 

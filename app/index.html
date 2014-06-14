@@ -9,7 +9,7 @@
 <html class="no-js" ng-app="ngShowcaseApp"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title ng-bind="config.title">Angular范例程序</title>
+    <title>Angular范例程序</title>
     <meta name="fragment" content="!">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="description" content="">
@@ -40,10 +40,11 @@
             <app-nav></app-nav>
         </div>
         <div class="col-md-5">
-            <div ui-view class="main-content">正在加载，请稍候……</div>
+          <app-brief></app-brief>
+          <div ui-view>正在加载，请稍候……</div>
         </div>
         <div class="col-md-5">
-            <app-view-status></app-view-status>
+          <app-view-status></app-view-status>
             <app-view-source></app-view-source>
         </div>
     </div>
@@ -118,11 +119,12 @@
 <script src="scripts/directives/app/nav.js" charset="utf-8"></script>
 <script src="scripts/directives/app/viewSource.js" charset="utf-8"></script>
 <script src="scripts/directives/app/viewStatus.js" charset="utf-8"></script>
+<script src="scripts/directives/app/brief.js" charset="utf-8"></script>
 
 <script src="scripts/controllers/notFound.js" charset="utf-8"></script>
 
 <script src="scripts/controllers/home.js" charset="utf-8"></script>
-<script src="scripts/controllers/home/main.js" charset="utf-8"></script>
+<script src="scripts/controllers/home/home.js" charset="utf-8"></script>
 <script src="scripts/controllers/home/about.js" charset="utf-8"></script>
 <script src="scripts/controllers/home/contact.js" charset="utf-8"></script>
 <script src="scripts/controllers/show.js" charset="utf-8"></script>

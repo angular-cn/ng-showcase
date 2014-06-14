@@ -1,39 +1,39 @@
-<fieldset>
-  <legend>Demo - 把对象作为value</legend>
-  <label>
-    <select class="form-control" ng-model="vm.value" ng-options="city.label for city in vm.cities">
-          <option value="">-- 请选择城市 --</option>
-    </select></label>
-  <div>您输入的是：{{vm.value}}</div>
-</fieldset>
-<fieldset>
-  <legend>Demo - 把code作为value</legend>
-  <label>
-    <select class="form-control" ng-model="vm.codeValue" ng-options="city.code as city.label for city in vm.cities">
-      <option value="">-- 请选择城市 --</option>
-    </select></label>
-  <div>您输入的是：{{vm.codeValue}}</div>
-</fieldset>
-<fieldset>
-  <legend>Demo - 分组</legend>
-  <label>
-    <select class="form-control" ng-model="vm.groupedValue" ng-options="city.code as city.label group by city.province for city in vm.cities ">
-      <option value="">-- 请选择城市 --</option>
-    </select></label>
-  <div>您输入的是：{{vm.groupedValue}}</div>
-</fieldset>
-<fieldset>
-  <legend>Demo - track by</legend>
-  <label>
-    <select class="form-control" ng-model="vm.trackValue" ng-options="city.label for city in vm.cities track by city.code">
-      <option value="">-- 请选择城市 --</option>
-    </select>
-  </label>
-  <span class="btn btn-primary" ng-click="vm.trackValue = {code: 'sh', label: '魔都'}">选择魔都</span>
-  <span class="btn btn-primary" ng-click="vm.trackValue = {code: 'sh', label: '上海'}">选择上海</span>
-  <div>您输入的是：{{vm.trackValue}}</div>
-  <div class="alert alert-info">
-    <h4>说明</h4>
-    track by 可以让匹配的时候只比较特定的字段，而忽略其他字段，并且不做对象的引用比较
-  </div>
-</fieldset>
+<h4>把对象作为value</h4>
+<label>
+  <select class="form-control" ng-model="vm.value" ng-options="city.label for city in vm.cities">
+    <option value="">-- 请选择城市 --</option>
+  </select></label>
+<div>您输入的是：{{vm.value}}</div>
+
+
+<h4>把code作为value</h4>
+<label>
+  <select class="form-control" ng-model="vm.codeValue" ng-options="city.code as city.label for city in vm.cities">
+    <option value="">-- 请选择城市 --</option>
+  </select></label>
+<div>您输入的是：{{vm.codeValue}}</div>
+
+
+<h4>分组</h4>
+<label>
+  <select class="form-control" ng-model="vm.groupedValue"
+          ng-options="city.code as city.label group by city.province for city in vm.cities ">
+    <option value="">-- 请选择城市 --</option>
+  </select></label>
+<div>您输入的是：{{vm.groupedValue}}</div>
+
+
+<h4>track by</h4>
+<label>
+  <select class="form-control" ng-model="vm.trackValue"
+          ng-options="city.label for city in vm.cities track by city.code">
+    <option value="">-- 请选择城市 --</option>
+  </select>
+</label>
+<span class="btn btn-primary" ng-click="vm.trackValue = {code: 'sh', label: '魔都'}">选择魔都</span>
+<span class="btn btn-primary" ng-click="vm.trackValue = {code: 'sh', label: '上海'}">选择上海</span>
+<div>您输入的是：{{vm.trackValue}}</div>
+<div class="alert alert-info">
+  track by 可以让匹配的时候只比较特定的字段，而忽略其他字段，并且不做对象的引用比较
+</div>
+

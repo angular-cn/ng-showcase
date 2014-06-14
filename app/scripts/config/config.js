@@ -6,5 +6,7 @@ angular.module('ngShowcaseApp').constant('config', {
     if (uri.startsWith('/'))
       throw new Error("");
     return this.apiRoot + uri;
-  }
+  },
+  title: "Angular范例程序"
 });
+

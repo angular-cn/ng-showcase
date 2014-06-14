@@ -1,12 +1,9 @@
-<fieldset>
-  <legend>自定义内容</legend>
-  <select class="form-control" ng-model="vm.value">
-    <option value="">-- 请选择城市 --</option>
-    <optgroup ng-repeat="province in vm.provinces" label="{{province.label}}">
-      <option ng-repeat="city in province.cities" value="{{city.code}}">
-        {{city.label}} ( {{city.population|number}}万人 )
-      </option>
-    </optgroup>
-  </select>
-  <div>您选择的是：{{vm.value}}</div>
-</fieldset>
+<select class="form-control" ng-model="vm.value">
+  <option value="">-- 请选择城市 --</option>
+  <optgroup ng-repeat="province in vm.provinces" label="{{province.label}}">
+    <option ng-repeat="city in province.cities" value="{{city.code}}">
+      {{city.label}} ( {{city.population|number}}万人 )
+    </option>
+  </optgroup>
+</select>
+<div>您选择的是：{{vm.value}}</div>

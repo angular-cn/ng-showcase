@@ -8,8 +8,7 @@
 angular.module('ngShowcaseApp').directive('appViewStatus', function($rootScope, $templateCache, $http, authors) {
   return {
     restrict: 'EA',
-    scope: {
-    },
+    scope: {},
     templateUrl: 'views/home/viewStatus.html',
     link: function(scope, element, attrs) {
       var vm = scope.vm = {};

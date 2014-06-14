@@ -7,16 +7,19 @@
   margin-bottom: 50px;
   text-align: center;
 }
+
 .chart canvas {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .percent {
   display: inline-block;
   line-height: 110px;
   z-index: 2;
 }
+
 .percent:after {
   content: '%';
   margin-left: 0.1em;

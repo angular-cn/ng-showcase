@@ -1,14 +1,13 @@
-<fieldset>
-  <legend>Demo - 传统风格</legend>
-  <label><input type="checkbox" ng-model="vm.checked"/>&nbsp;复选框</label>
-  <div>
-    {{vm.checked}}
-  </div>
-</fieldset>
-<fieldset>
-  <legend>Demo - 按钮风格</legend>
-  <label ng-class="{active:vm.checked}" class="btn btn-primary"><input type="checkbox" class="hidden" ng-model="vm.checked"/>&nbsp;复选框</label>
-  <div>
-    {{vm.checked}}
-  </div>
-</fieldset>
+<h4>传统风格</h4>
+<label><input type="checkbox" ng-model="vm.checked"/>&nbsp;复选框</label>
+<div>
+  {{vm.checked}}
+</div>
+
+
+<h4>按钮风格</h4>
+<label ng-class="{active:vm.checked}" class="btn btn-primary"><input type="checkbox" class="hidden"
+                                                                     ng-model="vm.checked"/>&nbsp;复选框</label>
+<div>
+  {{vm.checked}}
+</div>

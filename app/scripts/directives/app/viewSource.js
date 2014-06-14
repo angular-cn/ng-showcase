@@ -9,8 +9,7 @@
 angular.module('ngShowcaseApp').directive('appViewSource', function($rootScope, $templateCache, $http) {
   return {
     restrict: 'EA',
-    scope: {
-    },
+    scope: {},
     templateUrl: 'views/home/viewSource.html',
     link: function(scope, element, attrs) {
       var vm = scope.vm = {};

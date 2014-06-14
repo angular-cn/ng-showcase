@@ -1,26 +1,25 @@
-<fieldset>
-  <legend>范例</legend>
-  <div class="row">
-    <div class="col-md-2">单选下拉</div>
-    <div class="col-md-5">
-      <select ui-select2="vm.option1" ng-model="vm.value1" style="width: 100%">
-        <option value="one">First</option>
-        <option value="two">Second</option>
-        <option value="three">Third</option>
-      </select>
-    </div>
-    <div class="col-md-5">{{vm.value1}}</div>
+<div class="row">
+  <div class="col-md-2">单选下拉</div>
+  <div class="col-md-5">
+    <select ui-select2="vm.option1" ng-model="vm.value1" style="width: 100%">
+      <option value="one">First</option>
+      <option value="two">Second</option>
+      <option value="three">Third</option>
+    </select>
   </div>
-  <br/>
-  <div class="row">
-    <div class="col-md-2">多选输入</div>
-    <div class="col-md-5">
-      <input type="text" ui-select2="vm.option2" ng-model="vm.value2" style="width: 100%" />
-    </div>
-    <div class="col-md-5">{{vm.value2}}</div>
+  <div class="col-md-5">{{vm.value1}}</div>
+</div>
+<br/>
+<div class="row">
+  <div class="col-md-2">多选输入</div>
+  <div class="col-md-5">
+    <input type="text" ui-select2="vm.option2" ng-model="vm.value2" style="width: 100%"/>
   </div>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  这是一个第三方指令（module: ui.select2），它封装了<a href="http://ivaynberg.github.io/select2/" target="_blank">jquery的select2插件</a>。官方网站请<a href="https://github.com/angular-ui/ui-select2" target="_blank">点此查看</a>。
-</fieldset>
+  <div class="col-md-5">{{vm.value2}}</div>
+</div>
+
+
+<h3>说明</h3>
+这是一个第三方指令（module: ui.select2），它封装了<a href="http://ivaynberg.github.io/select2/"
+                                     target="_blank">jquery的select2插件</a>。官方网站请<a
+    href="https://github.com/angular-ui/ui-select2" target="_blank">点此查看</a>。

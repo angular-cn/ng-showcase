@@ -4,7 +4,8 @@
     <td>
       <span ng-repeat="author in vm.authors">
         <a ng-href="{{author.github}}" target="_blank">{{author.name}}</a>
-        <a ng-if="author.email" ng-href="mailto:{{author.email}}" target="_blank"><i class="glyphicon glyphicon glyphicon-send"></i></a>
+        <a ng-if="author.email" ng-href="mailto:{{author.email}}" target="_blank"><i
+            class="glyphicon glyphicon glyphicon-send"></i></a>
       </span>
       <span ng-if="!vm.authors.length">
         （暂无）

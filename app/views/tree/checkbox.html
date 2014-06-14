@@ -1,40 +1,38 @@
-<link rel="stylesheet" href="views/tree/checkbox.css" />
-<fieldset>
-  <legend>Demo</legend>
-  <div class="tree">
-    <ul>
-      <li ng-repeat="country in vm.countries" ng-class="{closed:country.closed}">
-        <div>
-          <input type="checkbox" ng-model="country.checked" ng-change="vm.countryChanged(country)" ng-class="{intermediate: vm.isIntermediateCountry(country)}"/>
+<link rel="stylesheet" href="views/tree/checkbox.css"/>
+<div class="tree">
+  <ul>
+    <li ng-repeat="country in vm.countries" ng-class="{closed:country.closed}">
+      <div>
+        <input type="checkbox" ng-model="country.checked" ng-change="vm.countryChanged(country)"
+               ng-class="{intermediate: vm.isIntermediateCountry(country)}"/>
           <span ng-click="country.closed=!country.closed">
             <span class="glyphicon" ng-class="country.closed?'glyphicon-plus':'glyphicon-minus'"></span>
             <img ng-src="images/{{country.flag}}"/>
             {{country.label}}
           </span>
-        </div>
-        <ul ng-class="{hidden: country.closed}">
-          <li ng-repeat="province in country.provinces" ng-class="{closed:province.closed}">
-            <input type="checkbox" ng-model="province.checked" ng-change="vm.provinceChanged(province, country)" ng-class="{intermediate: vm.isIntermediateProvince(province)}"/>
+      </div>
+      <ul ng-class="{hidden: country.closed}">
+        <li ng-repeat="province in country.provinces" ng-class="{closed:province.closed}">
+          <input type="checkbox" ng-model="province.checked" ng-change="vm.provinceChanged(province, country)"
+                 ng-class="{intermediate: vm.isIntermediateProvince(province)}"/>
             <span ng-click="province.closed=!province.closed">
               <span class="glyphicon" ng-class="province.closed?'glyphicon-plus':'glyphicon-minus'"></span>
               {{province.label}}
             </span>
-            <ul ng-class="{hidden: province.closed}">
-              <li ng-repeat="city in province.cities">
-                <label>
-                  <input type="checkbox" ng-model="city.checked" ng-change="vm.cityChanged(city, province, country)"/>
-                  {{city.label}}
-                </label>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</fieldset>
+          <ul ng-class="{hidden: province.closed}">
+            <li ng-repeat="city in province.cities">
+              <label>
+                <input type="checkbox" ng-model="city.checked" ng-change="vm.cityChanged(city, province, country)"/>
+                {{city.label}}
+              </label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
 
-<fieldset>
-  <legend>说明</legend>
-  这是一个使用controller中的逻辑来实现级联复选框的表，可以支持级联选择以及半选中（semi-checked）状态
-</fieldset>
+
+<h3>说明</h3>
+这是一个使用controller中的逻辑来实现级联复选框的表，可以支持级联选择以及半选中（semi-checked）状态

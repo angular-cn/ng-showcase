@@ -29,6 +29,8 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
       url: '/' + lastState,
       controller: 'ctrl.' + state,
       templateUrl: 'views/' + path + '.html',
+      label: item.label,
+      description: item.description,
       authors: item.authors,
       progress: item.progress
     });

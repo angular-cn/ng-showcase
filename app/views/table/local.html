@@ -1,93 +1,93 @@
 <link rel="stylesheet" href="views/table/local.css"/>
-<fieldset>
-  <legend>前端实现：分页/排序/过滤/就地编辑</legend>
-  <div class="input-group pull-right global-search">
-    <label class="input-group-addon">全局搜索</label>
-    <input type="text" class="form-control" ng-model="vm.filter.$"/>
-  </div>
-  <table class="table table-bordered table-hover">
-    <thead>
-    <tr>
-      <th ng-repeat="column in vm.columns" ng-if="!column.hidden" ng-click="vm.sort.toggle(column)"
-          ng-class="{sortable: column.sortable !== false}">
-        {{column.label}}
-        <i ng-if="column.name === vm.sort.column && vm.sort.direction"
-           class="glyphicon {{vm.sort.direction|orderClass}}"></i>
-      </th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr>
-      <td><input type="text" ng-model="vm.filter.id" class="form-control"/></td>
-      <td><input type="text" ng-model="vm.filter.name" class="form-control"/></td>
-      <td><input type="number" ng-model="vm.filter.followers" class="form-control"/></td>
-      <td><input type="number" ng-model="vm.filter.income" class="form-control"/></td>
-      <td></td>
-    </tr>
-    <tr ng-repeat="item in vm.items|filter:vm.filter|orderBy:vm.sort.column:vm.sort.direction===-1|paging:vm.page.index:vm.page.size">
-      <td>
-        {{item.id}}
-        <span class="btn btn-primary btn-xs pull-right" title="编辑" ng-if="!item.$editing" ng-click="item.$editing = true">
+
+<div class="input-group pull-right global-search">
+  <label class="input-group-addon">全局搜索</label>
+  <input type="text" class="form-control" ng-model="vm.filter.$"/>
+</div>
+<table class="table table-bordered table-hover">
+  <thead>
+  <tr>
+    <th ng-repeat="column in vm.columns" ng-if="!column.hidden" ng-click="vm.sort.toggle(column)"
+        ng-class="{sortable: column.sortable !== false}">
+      {{column.label}}
+      <i ng-if="column.name === vm.sort.column && vm.sort.direction"
+         class="glyphicon {{vm.sort.direction|orderClass}}"></i>
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr>
+    <td><input type="text" ng-model="vm.filter.id" class="form-control"/></td>
+    <td><input type="text" ng-model="vm.filter.name" class="form-control"/></td>
+    <td><input type="number" ng-model="vm.filter.followers" class="form-control"/></td>
+    <td><input type="number" ng-model="vm.filter.income" class="form-control"/></td>
+    <td></td>
+  </tr>
+  <tr ng-repeat="item in vm.items|filter:vm.filter|orderBy:vm.sort.column:vm.sort.direction===-1|paging:vm.page.index:vm.page.size">
+    <td>
+      {{item.id}}
+        <span class="btn btn-primary btn-xs pull-right" title="编辑" ng-if="!item.$editing"
+              ng-click="item.$editing = true">
           <i class="glyphicon glyphicon-pencil"></i>
         </span>
-        <span class="btn btn-primary btn-xs pull-right" title="保存" ng-if="item.$editing" ng-click="item.$editing = false">
+        <span class="btn btn-primary btn-xs pull-right" title="保存" ng-if="item.$editing"
+              ng-click="item.$editing = false">
           <i class="glyphicon glyphicon-floppy-disk"></i>
         </span>
-      </td>
-      <td>
-        <span ng-if="!item.$editing">{{item.name}}</span>
-        <input type="text" class="form-control" ng-model="item.name" ng-if="item.$editing"/>
-      </td>
-      <td class="text-right">
-        <span ng-if="!item.$editing">{{item.followers|number}}</span>
-        <input type="number" class="form-control" ng-model="item.followers" ng-if="item.$editing"/>
-      </td>
-      <td class="text-right">
-        <span ng-if="!item.$editing">{{item.income|currency}}</span>
-        <input type="number" class="form-control" ng-model="item.income" ng-if="item.$editing"/>
-      </td>
-      <td>
+    </td>
+    <td>
+      <span ng-if="!item.$editing">{{item.name}}</span>
+      <input type="text" class="form-control" ng-model="item.name" ng-if="item.$editing"/>
+    </td>
+    <td class="text-right">
+      <span ng-if="!item.$editing">{{item.followers|number}}</span>
+      <input type="number" class="form-control" ng-model="item.followers" ng-if="item.$editing"/>
+    </td>
+    <td class="text-right">
+      <span ng-if="!item.$editing">{{item.income|currency}}</span>
+      <input type="number" class="form-control" ng-model="item.income" ng-if="item.$editing"/>
+    </td>
+    <td>
         <span class="btn btn-primary btn-xs" title="详情" ng-mouseenter="item.popover=true"
               ng-mouseleave="item.popover=false"><i
             class="glyphicon glyphicon-comment"></i></span>
 
-        <div class="relative">
-          <div class="popover" ng-style="{display: item.popover?'block':'none'}">
-            <div class="popover-title">
-              {{item.id}} - {{item.name}}
-            </div>
-            <div class="popover-content">
-              粉丝：{{item.followers|number}}<br/>
-              生日：{{item.birthday|date}}<br/>
-              年龄：{{vm.age(item.birthday)}}岁<br/>
-              收入：{{item.income|currency}}
-            </div>
+      <div class="relative">
+        <div class="popover" ng-style="{display: item.popover?'block':'none'}">
+          <div class="popover-title">
+            {{item.id}} - {{item.name}}
+          </div>
+          <div class="popover-content">
+            粉丝：{{item.followers|number}}<br/>
+            生日：{{item.birthday|date}}<br/>
+            年龄：{{vm.age(item.birthday)}}岁<br/>
+            收入：{{item.income|currency}}
           </div>
         </div>
-      </td>
-    </tr>
-    </tbody>
-  </table>
-  <div class="row">
-    <div class="col-md-3">
-      <select ng-model="vm.page.size" class="form-control" title="每页条目数"
-              ng-options="pageSize for pageSize in [5, 20, 100]">
-      </select>
-    </div>
-    <div class="col-md-9">
-      <pagination total-items="vm.items|filter:vm.filter|size" ng-model="vm.page.index" max-size="5"
-                  items-per-page="vm.page.size"
-                  class="pagination-sm pull-right" boundary-links="true"></pagination>
-    </div>
+      </div>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div class="row">
+  <div class="col-md-3">
+    <select ng-model="vm.page.size" class="form-control" title="每页条目数"
+            ng-options="pageSize for pageSize in [5, 20, 100]">
+    </select>
   </div>
-</fieldset>
-<fieldset>
-  <legend>说明</legend>
-  这里使用了三个自定义过滤器：
-  <ul>
-    <li><a href="scripts/filters/paging.js" target="_blank">paging用来分页</a></li>
-    <li><a href="scripts/filters/size.js" target="_blank">size用来获取数组长度</a></li>
-    <li><a href="scripts/filters/orderClass.js" target="_blank">orderClass用来生成排序图标</a></li>
-  </ul>
-  这都是几句代码的小型过滤器，点击这些链接可以查看源码
-</fieldset>
+  <div class="col-md-9">
+    <pagination total-items="vm.items|filter:vm.filter|size" ng-model="vm.page.index" max-size="5"
+                items-per-page="vm.page.size"
+                class="pagination-sm pull-right" boundary-links="true"></pagination>
+  </div>
+</div>
+
+
+<h3>说明</h3>
+这里使用了三个自定义过滤器：
+<ul>
+  <li><a href="scripts/filters/paging.js" target="_blank">paging用来分页</a></li>
+  <li><a href="scripts/filters/size.js" target="_blank">size用来获取数组长度</a></li>
+  <li><a href="scripts/filters/orderClass.js" target="_blank">orderClass用来生成排序图标</a></li>
+</ul>
+这都是几句代码的小型过滤器，点击这些链接可以查看源码

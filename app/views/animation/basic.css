@@ -1,15 +1,16 @@
 /*给repeat中的enter和leave事件添加基础动画*/
 .repeat.ng-enter,
 .repeat.ng-leave {
-  -webkit-transition:0.5s linear all;
-  transition:0.5s linear all;
+  -webkit-transition: 0.5s linear all;
+  transition: 0.5s linear all;
 }
 
 .repeat.ng-enter,
 .repeat.ng-leave.ng-leave-active {
-  opacity:0;
+  opacity: 0;
 }
+
 .repeat.ng-leave,
 .repeat.ng-enter.ng-enter-active {
-  opacity:1;
+  opacity: 1;
 }

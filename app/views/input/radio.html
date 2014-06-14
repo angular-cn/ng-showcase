@@ -1,19 +1,20 @@
-<fieldset>
-  <legend>按钮组风格</legend>
-  <div class="btn-group">
-    <label ng-repeat="value in vm.values" ng-class="{btn: true, 'btn-primary': true, active: value.code == vm.selection.code}">
-      <input type="radio" class="hidden" name="myTestRadio" ng-model="vm.selection" ng-value="value"/>编号：{{value.code}}，年龄：{{value.age}}
-    </label>
-  </div>
-</fieldset>
-<fieldset>
-  <legend>单选框风格</legend>
-  <div class="btn-group">
-    <label ng-repeat="value in vm.values">
-      <input type="radio" name="myTestRadio" ng-model="vm.selection" ng-value="value" ng-checked="vm.selection.code == value.code"/>编号：{{value.code}}，年龄：{{value.age}}&nbsp;&nbsp;
-    </label>
-  </div>
-</fieldset>
+<h4>按钮组风格</h4>
+<div class="btn-group">
+  <label ng-repeat="value in vm.values"
+         ng-class="{btn: true, 'btn-primary': true, active: value.code == vm.selection.code}">
+    <input type="radio" class="hidden" name="myTestRadio" ng-model="vm.selection" ng-value="value"/>编号：{{value.code}}，年龄：{{value.age}}
+  </label>
+</div>
+
+
+<h4>单选框风格</h4>
+<div class="btn-group">
+  <label ng-repeat="value in vm.values">
+    <input type="radio" name="myTestRadio" ng-model="vm.selection" ng-value="value"
+           ng-checked="vm.selection.code == value.code"/>编号：{{value.code}}，年龄：{{value.age}}&nbsp;&nbsp;
+  </label>
+</div>
+
 <div>
   您选中的是：{{vm.selection}}
 </div>
