@@ -295,6 +295,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'utils.portal',
         label: '动态门户'
+      },
+      {
+        state: 'utils.zoom',
+        label: '图片放大'
       }
     ]
   },

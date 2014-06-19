@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="views/utils/zoom.css"/>
+<div class="thumb-pane">
+  <img ng-src="/images/thumb.jpg" alt="试验图片"
+       sc-resize="vm.onThumbSize(width, height)"/>
+  <div class="mask" ng-style="{left: vm.thumb.x - vm.mask.width / 2 + 'px', top: vm.thumb.y - vm.mask.height / 2 + 'px'}" sc-resize="vm.onMaskSize(width, height)"></div>
+  <div class="overlay" ng-mousemove="vm.onThumbMouseMove($event)"></div>
+</div>
+<div class="zoom-pane">
+  <img ng-src="/images/full.jpg" alt="大图" sc-resize="vm.onFullSize(width, height)"
+      ng-style="{left: '-' + vm.full.x + 'px', top: '-' + vm.full.y + 'px'}"/>
+</div>
+
+<h3>说明</h3>
+这是一个仿购物网站的商品细节查看器

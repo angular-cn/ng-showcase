@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * 可被递归的内容
+ * 可被递归的内容，这是一个进一步简化sf-treerepeat的尝试
  */
 angular.module('scHelper').directive('scRecursion', function() {
   return {

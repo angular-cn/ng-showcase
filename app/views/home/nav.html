@@ -2,7 +2,11 @@
   <li>
     <h4>{{group.label}}</h4>
     <ul class="nav nav-pills nav-level-2">
-      <li ui-sref-active="active" ng-repeat="item in group.items"><a ui-sref="{{item.state}}">{{item.label}}</a></li>
+      <li ui-sref-active="active" ng-repeat="item in group.items" title="{{item.progress !== 100?'仍在开发中':''}}">
+        <a ui-sref="{{item.state}}">{{item.label}}
+        <i class="glyphicon glyphicon-warning-sign" ng-if="item.progress !== 100"></i>
+        </a>
+      </li>
     </ul>
   </li>
 </ul>

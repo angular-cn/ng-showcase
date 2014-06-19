@@ -64,6 +64,9 @@ h3 {
 ul.nav-level-2.nav > li > a {
     padding: 6px 9px;
 }
+ul.nav-level-2.nav > li > a .glyphicon {
+  color: #f0ad4e !important;
+}
 
 .nav h4 {
     cursor: default;
