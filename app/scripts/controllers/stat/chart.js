@@ -4,7 +4,7 @@ angular.module('ngShowcaseApp').controller('ctrl.stat.chart', function ($scope) 
   var vm = $scope.vm = {};
   vm.chart = undefined;
   vm.setTitle = function(title) {
-    vm.chart.setTitle({text: title});
+    vm.chart.xAxis[0].setTitle({text: title});
   };
   vm.config = {
     chart: {
@@ -21,6 +21,9 @@ angular.module('ngShowcaseApp').controller('ctrl.stat.chart', function ($scope) 
       text: '来源: WorldClimate.com'
     },
     xAxis: {
+      title: {
+        text: '月份'
+      },
       categories: ['一', '二', '三', '四', '五', '六', '七', '八', '九', '十', '十一', '十二']
     },
     yAxis: {

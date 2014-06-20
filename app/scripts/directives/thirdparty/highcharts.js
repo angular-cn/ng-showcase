@@ -16,8 +16,10 @@ angular.module('scHelper').directive('scHighchart', function() {
       config.chart.renderTo = $element[0];
       $element.css('display', 'block');
       var chart = new Highcharts.Chart($scope.config);
-//      chart.setTitle({text: 'abc'});
       ngModel.$setViewValue(chart);
+      $scope.$watch('config.xAxis', function(value) {
+        chart.redraw();
+      }, true);
     }
   }
 });
