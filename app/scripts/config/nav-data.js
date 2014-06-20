@@ -111,6 +111,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'select.cascade',
         label: '级联',
+        files: {
+          'scripts/config/city-data.js': '国家、省份、城市的范例数据'
+        },
         authors: ['雪狼'],
         progress: 100
       },
@@ -153,6 +156,11 @@ angular.module('ngShowcaseApp').constant('NavData', [
         state: 'table.local',
         label: '前端综合',
         description: "前端实现：分页/排序/过滤/就地编辑",
+        files: {
+          'scripts/filters/paging.js': '进行前端分页',
+          'scripts/filters/size.js': '取数组长度的过滤器',
+          'scripts/filters/orderClass.js': '生成排序箭头css类的过滤器'
+        },
         authors: ['雪狼'],
         progress: 100
       },
@@ -211,6 +219,10 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'tree.treeData',
         label: 'TreeData',
+        files: {
+          'scripts/services/TreeData.js': '实现级联勾选逻辑的类',
+          'scripts/services/TreeDataTest.js': '单元测试'
+        },
         authors: ['雪狼'],
         progress: 100
       },
@@ -298,7 +310,16 @@ angular.module('ngShowcaseApp').constant('NavData', [
       },
       {
         state: 'utils.zoom',
-        label: '图片放大'
+        label: '图片放大器',
+        files: {
+          'scripts/services/Rect.js': '矩形',
+          'scripts/services/Zoom.js': '放大',
+          'scripts/services/ZoomTest.js': '单元测试',
+          'scripts/directives/common/resize.js': '改变大小事件',
+          'scripts/directives/common/position.js': '修改大小'
+        },
+        authors: ['雪狼'],
+        progress: 100
       }
     ]
   },
@@ -319,6 +340,9 @@ angular.module('ngShowcaseApp').constant('NavData', [
       {
         state: 'thirdparty.baiduueditor',
         label: '百度UEditor',
+        files: {
+          'scripts/directives/thirdparty/baiduueditor.js': '基于百度UEditor封装的自定义指令'
+        },
         authors: ['zxsoft'],
         progress: 60
       }

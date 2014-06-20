@@ -10,3 +10,8 @@ angular.module('ngShowcaseApp').constant('config', {
   title: "Angular范例程序"
 });
 
+angular.module('ngShowcaseApp').config(function(hljsServiceProvider) {
+  hljsServiceProvider.setOptions({
+
+  });
+});

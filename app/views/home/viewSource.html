@@ -1,18 +1,16 @@
-<ul class="nav nav-tabs">
-  <li ng-class="{active:vm.activePage === 'html'}"><a href="javascript:;" ng-click="vm.activePage = 'html'">HTML</a>
-  </li>
-  <li ng-class="{active:vm.activePage === 'js'}"><a href="javascript:;" ng-click="vm.activePage = 'js'">JS</a></li>
-  <li ng-class="{active:vm.activePage === 'css'}" ng-if="vm.css"><a href="javascript:;"
-                                                                    ng-click="vm.activePage = 'css'">CSS</a></li>
-</ul>
+<!--<ul class="nav nav-tabs">-->
+  <!--<li ng-repeat="file in vm.files" ng-class="{active:vm.isActive(file)}">-->
+    <!--<a href="javascript:;" ng-click="vm.setActive(file)">{{file.name}}</a>-->
+  <!--</li>-->
+<!--</ul>-->
+<div class="btn-group">
+  <span title="{{file.description}}" class="btn btn-default" ng-repeat="file in vm.files"
+        ng-if="file.source" ng-class="{active:vm.isActive(file)}" ng-click="vm.setActive(file)">
+    {{file.name}}
+  </span>
+</div>
 <div class="tab-content tab-bordered">
-  <div class="tab-panel" ng-class="{hidden: vm.activePage !== 'html'}">
-    <div hljs source="vm.view" language="html"></div>
-  </div>
-  <div class="tab-panel" ng-class="{hidden: vm.activePage !== 'js'}">
-    <div hljs source="vm.controller" language="javascript"></div>
-  </div>
-  <div class="tab-panel" ng-class="{hidden: vm.activePage !== 'css'}" ng-if="vm.css">
-    <div hljs source="vm.css" language="css"></div>
+  <div ng-repeat="file in vm.files" class="tab-panel" ng-class="{hidden: !vm.isActive(file)}" ng-if="file.source">
+    <div hljs source="file.source" language="{{file.type}}"></div>
   </div>
 </div>

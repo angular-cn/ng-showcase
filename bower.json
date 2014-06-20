@@ -19,7 +19,10 @@
     "angular.easy-pie-chart": "2.1.5-angular",
     "angular-file-upload": "~0.5.6",
     "angular-ui-select2": "~0.0.5",
-    "angular-tree-repeat": "~0.0.1"
+    "angular-tree-repeat": "~0.0.1",
+    "d3": "~3.4.8",
+    "angularjs-nvd3-directives": "~0.0.7",
+    "highcharts": "~3.0.7"
   },
   "devDependencies": {
     "angular-mocks": "1.2.15",

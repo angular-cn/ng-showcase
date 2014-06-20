@@ -1,7 +1,7 @@
 /**
  * Created by xuanzhang on 14-5-12.
  */
-angular.module('ngShowcaseApp').directive('ueditor', function () {
+angular.module('scHelper').directive('ueditor', function () {
   return {
     restrict: 'AE',
     transclude: true,

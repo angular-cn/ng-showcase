@@ -30,6 +30,7 @@ angular.module('ngShowcaseApp').config(function($stateProvider, $urlRouterProvid
       controller: 'ctrl.' + state,
       templateUrl: 'views/' + path + '.html',
       label: item.label,
+      files: item.files,
       description: item.description,
       authors: item.authors,
       progress: item.progress

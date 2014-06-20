@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css" />
     <link rel="stylesheet" href="bower_components/select2/select2.css" />
+    <link rel="stylesheet" href="bower_components/nvd3/src/nv.d3.css" />
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
@@ -95,6 +96,10 @@
 <script src="bower_components/select2/select2.js"></script>
 <script src="bower_components/angular-ui-select2/src/select2.js"></script>
 <script src="bower_components/angular-tree-repeat/angular-tree-repeat.min.js"></script>
+<script src="bower_components/d3/d3.js"></script>
+<script src="bower_components/nvd3/nv.d3.js"></script>
+<script src="bower_components/angularjs-nvd3-directives/dist/angularjs-nvd3-directives.js"></script>
+<script src="bower_components/highcharts/highcharts.js"></script>
 <!-- endbower -->
 <!-- endbuild -->
 
@@ -106,6 +111,8 @@
 <script src="scripts/filters/orderClass.js" charset="utf-8"></script>
 <script src="scripts/filters/size.js" charset="utf-8"></script>
 <script src="scripts/services/TreeData.js" charset="utf-8"></script>
+<script src="scripts/services/Rect.js" charset="utf-8"></script>
+<script src="scripts/services/Zoom.js" charset="utf-8"></script>
 <script src="scripts/services/DaoBook.js" charset="utf-8"></script>
 
 <script src="lib/angular-locale_zh-cn.js" charset="utf-8"></script>
@@ -123,6 +130,13 @@
 <script src="scripts/directives/app/viewStatus.js" charset="utf-8"></script>
 <script src="scripts/directives/app/brief.js" charset="utf-8"></script>
 <script src="scripts/directives/common/resize.js" charset="utf-8"></script>
+<script src="scripts/directives/common/position.js" charset="utf-8"></script>
+<script src="scripts/directives/thirdparty/highcharts.js" charset="utf-8"></script>
+
+<script src="thirdparty-libs/ueditor1_3_6-utf8-jsp/ueditor.config.js"></script>
+<script src="thirdparty-libs/ueditor1_3_6-utf8-jsp/ueditor.all.min.js"></script>
+<script src="thirdparty-libs/ueditor1_3_6-utf8-jsp/lang/zh-cn/zh-cn.js"></script>
+<script src="scripts/directives/thirdparty/baiduueditor.js"></script>
 
 <script src="scripts/controllers/notFound.js" charset="utf-8"></script>
 
@@ -187,13 +201,8 @@
 <script src="scripts/controllers/utils/portal.js" charset="utf-8"></script>
 <script src="scripts/controllers/utils/zoom.js" charset="utf-8"></script>
 
-<script src="thirdparty-libs/ueditor1_3_6-utf8-jsp/ueditor.config.js"></script>
-<script src="thirdparty-libs/ueditor1_3_6-utf8-jsp/ueditor.all.min.js"></script>
-<script src="thirdparty-libs/ueditor1_3_6-utf8-jsp/lang/zh-cn/zh-cn.js"></script>
-
 <script src="scripts/controllers/thirdparty.js"></script>
 <script src="scripts/controllers/thirdparty/baiduueditor.js"></script>
-<script src="scripts/directives/thirdparty/baiduueditor.js"></script>
 <!-- endbuild -->
 </body>
 </html>

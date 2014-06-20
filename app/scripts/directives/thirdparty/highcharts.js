@@ -1,19 +1,23 @@
 'use strict';
 
-angular.module('ngShowcaseApp').directive('highchart', function() {
+angular.module('scHelper').directive('scHighchart', function() {
   return {
     restrict: 'EA',
     scope: {
       config: '='
     },
-    link: function($scope, $element) {
+    require: 'ngModel',
+    link: function($scope, $element, attrs, ngModel) {
       // 强制指定指令所在的元素为绘制目标
-      angular.extend($scope.config, {
-        chart: {
-          renderTo: $element[0]
-        }
-      });
-      $scope.config.chart.instance = new Highcharts.Chart($scope.config);
+      var config = $scope.config;
+      if (!config.chart) {
+        config.chart = {}
+      }
+      config.chart.renderTo = $element[0];
+      $element.css('display', 'block');
+      var chart = new Highcharts.Chart($scope.config);
+//      chart.setTitle({text: 'abc'});
+      ngModel.$setViewValue(chart);
     }
   }
 });

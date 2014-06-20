@@ -1,7 +1,9 @@
 {
   "name": "ngshowcase",
   "version": "0.0.0",
-  "dependencies": {},
+  "dependencies": {
+    "nvd3": "~1.1.15"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.4.0",
