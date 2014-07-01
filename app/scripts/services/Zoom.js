@@ -2,25 +2,25 @@
 
 angular.module('scHelper').factory('Zoom', function(Rect) {
   function Zoom() {
-    var small = this.small = new Rect();
-    var smallView = this.smallView = new Rect();
-    var large = this.large = new Rect();
-    var largeView = this.largeView = new Rect();
-    // 根据三者的相对尺寸，把small中的坐标映射到large中的坐标
+    var active = this.active = new Rect();
+    var activeView = this.activeView = new Rect();
+    var passive = this.passive = new Rect();
+    var passiveView = this.passiveView = new Rect();
+    // 根据三者的相对尺寸，把active中的坐标映射到passive中的坐标
     var update = this.update = function() {
-      var ratioX = large.width / small.width;
-      var ratioY = large.height / small.height;
-      large.moveTo(-smallView.x * ratioX, -smallView.y * ratioY);
+      var ratioX = passive.width / active.width;
+      var ratioY = passive.height / active.height;
+      passive.moveTo(-activeView.x * ratioX, -activeView.y * ratioY);
     };
     this.resize = function() {
-      smallView.limitTo({left: 0, top: 0, right: small.width, bottom: small.height});
-      var ratioX = large.width / small.width;
-      var ratioY = large.height / small.height;
-      smallView.resize(largeView.width / ratioX, largeView.height / ratioY);
+      activeView.limitTo({left: 0, top: 0, right: active.width, bottom: active.height});
+      var ratioX = passive.width / active.width;
+      var ratioY = passive.height / active.height;
+      activeView.resize(passiveView.width / ratioX, passiveView.height / ratioY);
       update();
     };
-    largeView.onResize = small.onResize = large.onResize = this.resize;
-    smallView.onResize = smallView.onMove = this.update;
+    passiveView.onResize = active.onResize = passive.onResize = this.resize;
+    activeView.onResize = activeView.onMove = this.update;
   }
   return Zoom;
 });

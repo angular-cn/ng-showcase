@@ -2,29 +2,39 @@
 <h3>外部放大器</h3>
 <div class="outer-zoom">
   <div class="small">
-    <img ng-src="/images/small.jpg" alt="试验图片"
-         sc-resize="vm.zoom.small.resize(width, height)"/>
+    <img ng-src="images/small.jpg" alt="试验图片"
+         sc-resize="vm.zoom.active.resize(width, height)"/>
 
-    <div class="small-view" sc-position="vm.zoom.smallView"></div>
-    <div class="overlay" ng-mousemove="vm.zoom.smallView.centerTo($event.offsetX, $event.offsetY)"></div>
+    <div class="small-view" sc-position="vm.zoom.activeView"></div>
+    <div class="overlay" ng-mousemove="vm.zoom.activeView.centerTo($event.offsetX, $event.offsetY)"></div>
   </div>
-  <div class="large-view" sc-resize="vm.zoom.largeView.resize(width, height)">
-    <img ng-src="/images/large.jpg" alt="大图" sc-resize="vm.zoom.large.resize(width, height)"
-         sc-position="{x: vm.zoom.large.x, y: vm.zoom.large.y}" />
+  <div class="large-view" sc-resize="vm.zoom.passiveView.resize(width, height)">
+    <img ng-src="images/large.jpg" alt="大图" sc-resize="vm.zoom.passive.resize(width, height)"
+         sc-position="{x: vm.zoom.passive.x, y: vm.zoom.passive.y}" />
   </div>
 </div>
-<h3>内部放大器+鹰眼</h3>
-<div class="inner-zoom" sc-resize="vm.zoom1.largeView.resize(width, height)">
-  <img class="large" ng-src="/images/large.jpg" alt="大图" sc-resize="vm.zoom1.large.resize(width, height)"
-       sc-position="{x: vm.zoom1.large.x, y: vm.zoom1.large.y}" />
+<h3>内部放大器</h3>
+<div class="inner-zoom" sc-resize="vm.zoom1.passiveView.resize(width, height)">
+  <img class="large" ng-src="images/large.jpg" alt="大图" sc-resize="vm.zoom1.passive.resize(width, height)"
+       sc-position="{x: vm.zoom1.passive.x, y: vm.zoom1.passive.y}" />
   <div class="eagle-eye">
-    <img class="small" ng-src="/images/small.jpg" alt="试验图片"
-         sc-resize="vm.zoom1.small.resize(width, height)"/>
-    <div class="small-view" sc-position="vm.zoom1.smallView"></div>
-    <div class="overlay" ng-mousemove="vm.zoom1.smallView.centerTo($event.offsetX, $event.offsetY)"></div>
+    <img class="small" ng-src="images/small.jpg" alt="试验图片"
+         sc-resize="vm.zoom1.active.resize(width, height)"/>
+    <div class="small-view" sc-position="vm.zoom1.activeView"></div>
+    <div class="overlay" ng-mousemove="vm.zoom1.activeView.centerTo($event.offsetX, $event.offsetY)"></div>
   </div>
 </div>
-
+<!--<h3>鹰眼</h3>-->
+<!--<div class="eagle-eye-zoom" >-->
+  <!--<img class="large" ng-src="images/large.jpg" alt="大图" sc-resize="vm.zoom3.active.resize(width, height)"-->
+       <!--sc-position="{x: vm.zoom3.active.x, y: vm.zoom3.active.y}" />-->
+  <!--<div class="eagle-eye">-->
+    <!--<img class="small" ng-src="images/small.jpg" alt="试验图片"-->
+         <!--sc-resize="vm.zoom3.passive.resize(width, height);vm.zoom3.activeView.resize(width, height)"/>-->
+    <!--<div class="small-view" sc-position="vm.zoom3.passiveView"></div>-->
+  <!--</div>-->
+  <!--<div class="overlay" ng-mousemove="vm.zoom3.activeView.centerTo($event.offsetX, $event.offsetY)"></div>-->
+<!--</div>-->
 <h3>说明</h3>
 这里没有使用单一的大型指令去实现，而是遵循Angular的风格，实现了两个单一功能的小指令：resize和position（可在右侧查看源码）。
 <br/>

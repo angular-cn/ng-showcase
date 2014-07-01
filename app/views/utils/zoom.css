@@ -83,3 +83,46 @@
   background: white;
   opacity: 0.01;
 }
+
+.eagle-eye-zoom {
+  position: relative;
+  border: 1px dashed lightgray;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.eagle-eye-zoom .eagle-eye {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border: 1px dashed silver;
+}
+
+.eagle-eye-zoom .eagle-eye img {
+  opacity: 0.01;
+}
+.eagle-eye-zoom .large {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.eagle-eye-zoom .small-view {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: white;
+  opacity: 0.6;
+  border: 1px dotted black;
+}
+
+.eagle-eye-zoom .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  opacity: 0.01;
+}

@@ -4,4 +4,5 @@ angular.module('ngShowcaseApp').controller('ctrl.utils.zoom', function ($scope, 
   var vm = $scope.vm = {};
   vm.zoom = new Zoom();
   vm.zoom1 = new Zoom();
+  vm.zoom3 = new Zoom();
 });
