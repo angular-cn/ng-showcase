@@ -26,19 +26,19 @@
              ng-model="vm.user.name" class="form-control" placeholder="由字母、数字、下划线组成，以字母开头，3-30个字符">
     </div>
   </div>
-  <div class="form-group" ng-show="basic_form.$invalid && basic_form.$dirty && vm.show_error">
+  <div class="form-group" ng-show="basic_form.$invalid && (basic_form.$dirty || vm.show_type == 3) && vm.show_error">
     <label class="col-sm-2 control-label"></label>
 
     <div class="col-sm-10">
       <div class="alert alert-danger" style="margin-bottom: 0px">
         <ul>
-          <li ng-show="basic_form.user_email.$dirty && basic_form.user_email.$error.required">邮箱地址不能为空！</li>
-          <li ng-show="basic_form.user_email.$dirty && basic_form.user_email.$error.email">邮箱地址格式不正确！</li>
-          <li ng-show="basic_form.user_password.$dirty && basic_form.user_password.$error.required">密码不能为空！</li>
-          <li ng-show="basic_form.user_password.$dirty && basic_form.user_password.$error.maxlength">密码长度不能大于20个字符！</li>
-          <li ng-show="basic_form.user_password.$dirty && basic_form.user_password.$error.minlength">密码长度不能小于6个字符！</li>
-          <li ng-show="basic_form.user_name.$dirty && basic_form.user_name.$error.required">用户名不能为空！</li>
-          <li ng-show="basic_form.user_name.$dirty && basic_form.user_name.$error.pattern">用户名格式不正确！</li>
+          <li ng-show="(basic_form.user_email.$dirty || vm.show_type == 3) && basic_form.user_email.$error.required">邮箱地址不能为空！</li>
+          <li ng-show="(basic_form.user_email.$dirty || vm.show_type == 3) && basic_form.user_email.$error.email">邮箱地址格式不正确！</li>
+          <li ng-show="(basic_form.user_password.$dirty || vm.show_type == 3) && basic_form.user_password.$error.required">密码不能为空！</li>
+          <li ng-show="(basic_form.user_password.$dirty || vm.show_type == 3) && basic_form.user_password.$error.maxlength">密码长度不能大于20个字符！</li>
+          <li ng-show="(basic_form.user_password.$dirty || vm.show_type == 3) && basic_form.user_password.$error.minlength">密码长度不能小于6个字符！</li>
+          <li ng-show="(basic_form.user_name.$dirty || vm.show_type == 3) && basic_form.user_name.$error.required">用户名不能为空！</li>
+          <li ng-show="(basic_form.user_name.$dirty || vm.show_type == 3) && basic_form.user_name.$error.pattern">用户名格式不正确！</li>
         </ul>
       </div>
     </div>
@@ -46,7 +46,7 @@
 
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-10">
-      <button type="submit" ng-click="vm.submit()" class="btn btn-success"
+      <button type="submit" ng-click="vm.submit(basic_form)" class="btn btn-success"
               ng-disabled="basic_form.$invalid && vm.show_type != 3">提交
       </button>
     </div>
