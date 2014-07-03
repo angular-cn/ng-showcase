@@ -140,3 +140,7 @@ table.table thead th {
   border-left-color: #111415;
   border-right-color: #646668;
 }
+
+.tab-content code.hljs{
+    background-color: #f5f5f5;
+}
