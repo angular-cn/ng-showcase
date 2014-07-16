@@ -8,67 +8,70 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" ng-app="ngShowcaseApp"> <!--<![endif]-->
 <head>
-    <meta charset="utf-8">
-    <title>Angular范例程序</title>
-    <meta name="fragment" content="!">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css" />
-    <link rel="stylesheet" href="bower_components/select2/select2.css" />
-    <link rel="stylesheet" href="bower_components/nvd3/src/nv.d3.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-    <link rel="Shortcut Icon" href="images/favicon.ico" />
+  <meta charset="utf-8">
+  <title>Angular范例程序</title>
+  <meta name="fragment" content="!">
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css"/>
+  <link rel="stylesheet" href="bower_components/highlightjs/styles/default.css"/>
+  <link rel="stylesheet" href="bower_components/select2/select2.css"/>
+  <link rel="stylesheet" href="bower_components/nvd3/src/nv.d3.css"/>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css({.tmp,app}) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+  <link rel="Shortcut Icon" href="images/favicon.ico"/>
 
 </head>
 <body>
 <!--[if lt IE 7]>
 <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
+  your browser</a> to improve your experience.</p>
 <![endif]-->
 
 <!-- Add your site or application content here -->
 <app-header></app-header>
 <div class="main-content">
-    <div class="row">
-        <div class="col-md-2">
-            <app-nav></app-nav>
-        </div>
-        <div class="col-md-5">
-          <app-brief></app-brief>
-          <div ui-view>正在加载，请稍候……</div>
-        </div>
-        <div class="col-md-5">
-          <app-view-status></app-view-status>
-            <app-view-source></app-view-source>
-        </div>
+  <div class="row">
+    <div class="col-md-2">
+      <app-nav></app-nav>
     </div>
+    <div class="col-md-5">
+      <app-brief></app-brief>
+      <div ui-view>正在加载，请稍候……</div>
+    </div>
+    <div class="col-md-5">
+      <app-view-status></app-view-status>
+      <app-view-source></app-view-source>
+    </div>
+  </div>
 </div>
 <app-footer></app-footer>
 <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 <script>
-//    (function (i, s, o, g, r, a, m) {
-//        i['GoogleAnalyticsObject'] = r;
-//        i[r] = i[r] || function () {
-//            (i[r].q = i[r].q || []).push(arguments)
-//        }, i[r].l = 1 * new Date();
-//        a = s.createElement(o),
-//                m = s.getElementsByTagName(o)[0];
-//        a.async = 1;
-//        a.src = g;
-//        m.parentNode.insertBefore(a, m)
-//    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-//
-//    ga('create', 'UA-XXXXX-X');
-//    ga('send', 'pageview');
+  //    (function (i, s, o, g, r, a, m) {
+  //        i['GoogleAnalyticsObject'] = r;
+  //        i[r] = i[r] || function () {
+  //            (i[r].q = i[r].q || []).push(arguments)
+  //        }, i[r].l = 1 * new Date();
+  //        a = s.createElement(o),
+  //                m = s.getElementsByTagName(o)[0];
+  //        a.async = 1;
+  //        a.src = g;
+  //        m.parentNode.insertBefore(a, m)
+  //    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  //
+  //    ga('create', 'UA-XXXXX-X');
+  //    ga('send', 'pageview');
 </script>
 
 <!--[if lt IE 9]>

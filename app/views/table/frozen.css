@@ -1,0 +1,26 @@
+.scroll-box {
+  overflow-x: auto;
+  position: relative;
+  height: 300px;
+  width: 100px;
+  display: inline-block;
+}
+
+.scroll-box .h-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 500px;
+  height: 1px;
+  opacity: 0.01;
+}
+
+.scroll-box .v-bar {
+  position: absolute;
+
+  right: 0;
+  top: 0;
+  height: 500px;
+  width: 1px;
+  opacity: 0.01;
+}
