@@ -253,7 +253,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
                 state: 'form.customValidation',
                 label: '自定义校验',
                 authors: ['why520crazy'],
-                progress: 0
+                progress: 100
             },
             {
                 state: 'form.dependency',
