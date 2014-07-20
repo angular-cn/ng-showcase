@@ -1,1 +1,48 @@
-<div ui-view></div>
+<link rel="stylesheet" href="views/form/basic.css"/>
+<form class="form-horizontal showcase-form " role="form" id="dependency_form" name="dependency_form" novalidate="">
+
+    <div class="form-group">
+        <label class="col-sm-2 control-label">密码</label>
+
+        <div class="col-sm-10">
+            <input type="password" name="user_password" ng-model="vm.user.password"
+                   required="" ng-maxlength="20" ng-minlength="6" class="form-control"
+                   placeholder="6-20个字符">
+        </div>
+    </div>
+
+
+    <div class="form-group" ng-show="custom_form.$invalid && (custom_form.$dirty || vm.show_type == 3) && vm.show_error">
+        <label class="col-sm-2 control-label"></label>
+
+        <div class="col-sm-10">
+            <div class="alert alert-danger" style="margin-bottom: 0px">
+                <ul>
+                    <li ng-show="(dependency_form.user_password.$dirty || vm.show_type == 3) && dependency_form.user_password.$error.required">密码不能为空！</li>
+                    <li ng-show="(dependency_form.user_password.$dirty || vm.show_type == 3) && dependency_form.user_password.$error.maxlength">密码长度不能大于20个字符！</li>
+                    <li ng-show="(dependency_form.user_password.$dirty || vm.show_type == 3) && dependency_form.user_password.$error.minlength">密码长度不能小于6个字符！</li>
+                    <li ng-show="(dependency_form.user_name.$dirty || vm.show_type == 3) && dependency_form.user_name.$error.required">用户名不能为空！</li>
+                    <li ng-show="(dependency_form.user_name.$dirty || vm.show_type == 3) && dependency_form.user_name.$error.pattern">用户名格式不正确！</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" ng-click="vm.submit(custom_form)" class="btn btn-success"
+                    ng-disabled="custom_form.$invalid && vm.show_type != 3">提交
+            </button>
+        </div>
+    </div>
+
+</form>
+
+<hr/>
+<label>显示方式：
+    <select ng-model="vm.show_type" class="form-control" ng-change="vm.change_show_type(custom_form)">
+        <option value="1">只有输入框样式变化</option>
+        <option value="2">显示错误提示</option>
+        <option value="3">点击提交才显示错误提示</option>
+    </select>
+</label>
