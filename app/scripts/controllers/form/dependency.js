@@ -35,14 +35,21 @@ angular.module('ngShowcaseApp')
             require: "ngModel",
             link: function (scope, element, attr, ctrl) {
                 if (ctrl) {
-                    var EMAILS_REGEXP = /^([a-z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-z0-9-]+(\.[a-z0-9-]+)*[;；]?)+$/i;
-                    var customValidator = function (value) {
-                        var validity = ctrl.$isEmpty(value) || EMAILS_REGEXP.test(value)
-                        ctrl.$setValidity("multipleEmail", validity);
+                    var otherInput = element.inheritedData("$formController")[attrs.repeat];
+
+                    var repeatValidator = function (value) {
+                        var validity = value === otherInput.$viewValue;
+                        ctrl.$setValidity("repeat", validity);
                         return validity ? value : undefined;
                     };
-                    ctrl.$formatters.push(customValidator);
-                    ctrl.$parsers.push(customValidator);
+
+                    ctrl.$parsers.push(repeatValidator);
+                    ctrl.$formatters.push(repeatValidator);
+
+                    otherInput.$parsers.push(function (value) {
+                        ctrl.$setValidity("repeat", value === ctrl.$viewValue);
+                        return value;
+                    });
                 }
             }
         };
