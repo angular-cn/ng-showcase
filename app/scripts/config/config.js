@@ -11,7 +11,6 @@ angular.module('ngShowcaseApp').constant('config', {
 });
 
 angular.module('ngShowcaseApp').config(function($locationProvider, hljsServiceProvider) {
-  $locationProvider.hashPrefix('!');
   hljsServiceProvider.setOptions({
 
   });
