@@ -247,7 +247,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
                 state: 'form.remoteValidation',
                 label: '在线校验',
                 authors: ['why520crazy'],
-                progress: 0
+                progress: 10
             },
             {
                 state: 'form.customValidation',
@@ -259,7 +259,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
                 state: 'form.dependency',
                 label: '级联/依赖',
                 authors: ['why520crazy'],
-                progress: 0
+                progress: 100
             }
         ]
     },

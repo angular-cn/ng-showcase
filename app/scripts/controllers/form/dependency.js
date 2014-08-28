@@ -33,7 +33,7 @@ angular.module('ngShowcaseApp')
         return {
             restrict: 'A',
             require: "ngModel",
-            link: function (scope, element, attr, ctrl) {
+            link: function (scope, element, attrs, ctrl) {
                 if (ctrl) {
                     var otherInput = element.inheritedData("$formController")[attrs.repeat];
 
