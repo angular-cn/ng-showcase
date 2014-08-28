@@ -1,0 +1,8 @@
+.showcase-form textarea .ng-dirty.ng-invalid,
+.showcase-form select .ng-dirty.ng-invalid,
+.showcase-form input.ng-dirty.ng-invalid {
+    border-color: #e9322d;
+    -webkit-box-shadow: 0 0 6px #f8b9b7;
+    -moz-box-shadow: 0 0 6px #f8b9b7;
+    box-shadow: 0 0 6px #f8b9b7;
+}

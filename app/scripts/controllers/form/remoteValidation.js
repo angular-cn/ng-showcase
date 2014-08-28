@@ -51,7 +51,6 @@ angular.module('ngShowcaseApp')
                             } else {
                                 ngModel.$setValidity('romoteuniquecheck', false);
                             }
-
                         });
                     };
 
