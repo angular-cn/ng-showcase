@@ -1,1 +1,23 @@
-<div ui-view></div>
+<link rel="stylesheet" href="views/animation/custom.css"/>
+<center><h1 class="title {{classname}}">AngularJs</h1></center>
+ <select class="form-control" ng-model="choice" ng-change="change()">
+         <option>bounce</option>
+         <option>flash</option>
+         <option>pulse</option>
+         <option>rubberBand</option>
+         <option>shake</option>
+      </select>
+
+
+
+<h3>说明</h3>
+<ul>
+  <li>
+    采用了第三方css类库Animate.css，具体信息以及参数请参考
+    <a href="http://daneden.github.io/animate.css/" target="_blank">官方文档</a>
+    。
+  </li>
+  <li>
+    通过ng-model来实时修改classname
+  </li>
+</ul>

@@ -30,5 +30,10 @@ angular.module('ngShowcaseApp').constant('authors', [
         name: 'why520crazy',
         email: 'why520crazy@163.com',
         github: 'https://github.com/why520crazy'
+    },
+    {
+        name:'Leonardo',
+        email:'wang861622836@163.com',
+        github:'https://github.com/wleonardo'
     }
 ]);

@@ -5,10 +5,12 @@
     "nvd3": "~1.1.15"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
+    "connect-livereload": "^0.5.3",
+    "grunt": "^0.4.5",
     "grunt-autoprefixer": "~0.4.0",
     "grunt-bower-install": "~1.0.0",
     "grunt-concurrent": "~0.5.0",
+    "grunt-connect-proxy": "~0.1.10",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-concat": "~0.3.0",
     "grunt-contrib-connect": "~0.5.0",
@@ -20,21 +22,20 @@
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-contrib-watch": "~0.5.2",
     "grunt-google-cdn": "~0.2.0",
+    "grunt-karma": "~0.8.3",
     "grunt-newer": "~0.6.1",
     "grunt-ngmin": "~0.0.2",
     "grunt-rev": "~0.1.0",
     "grunt-svgmin": "~0.2.0",
     "grunt-usemin": "~2.0.0",
     "jshint-stylish": "~0.1.3",
-    "load-grunt-tasks": "~0.4.0",
-    "time-grunt": "~0.2.1",
-    "karma-ng-scenario": "~0.1.0",
-    "grunt-karma": "~0.8.3",
     "karma": "~0.12.14",
-    "karma-ng-html2js-preprocessor": "~0.1.0",
     "karma-jasmine": "~0.1.5",
+    "karma-ng-html2js-preprocessor": "~0.1.0",
+    "karma-ng-scenario": "~0.1.0",
     "karma-phantomjs-launcher": "~0.1.4",
-    "grunt-connect-proxy": "~0.1.10"
+    "load-grunt-tasks": "~0.4.0",
+    "time-grunt": "~0.2.1"
   },
   "engines": {
     "node": ">=0.10.0"
