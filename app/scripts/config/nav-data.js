@@ -295,7 +295,7 @@ angular.module('ngShowcaseApp').constant('NavData', [
                 state: 'animation.custom',
                 label: '自定义',
                 authors: ['Leonardo'],
-                progress: 30
+                progress: 100
             }
         ]
     },

@@ -1,14 +1,10 @@
 <link rel="stylesheet" href="views/animation/custom.css"/>
 <center><h1 class="title {{classname}}">AngularJs</h1></center>
  <select class="form-control" ng-model="choice" ng-change="change()">
-         <option>bounce</option>
-         <option>flash</option>
-         <option>pulse</option>
-         <option>rubberBand</option>
-         <option>shake</option>
-      </select>
-
-
+   <optgroup ng-repeat="(name, item) in choiceitems" label={{name}} >
+     <option ng-repeat="its in item">{{its}}</option>
+   </optgroup>
+  </select>
 
 <h3>说明</h3>
 <ul>
