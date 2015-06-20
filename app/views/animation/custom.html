@@ -1,19 +1,43 @@
-<link rel="stylesheet" href="views/animation/custom.css"/>
-<center><h1 class="title {{classname}}">AngularJs</h1></center>
- <select class="form-control" ng-model="choice" ng-change="change()">
-   <optgroup ng-repeat="(name, item) in choiceitems" label={{name}} >
-     <option ng-repeat="its in item">{{its}}</option>
-   </optgroup>
-  </select>
-
+<link rel="stylesheet" href="views/animation/custom.css" />
+<h1 class="title {{classname}}">AngularJs</h1>
+<select class="form-control" ng-model="choice" ng-change="change()" ng-options="value.value as value.label group by value.group for value in choiceitems">
+    <option value="">请选择</option>
+</select>
+<h1 class="title design">AngularJs</h1>
+<ul class="list-group">
+    <li class="list-group-item repeat" ng-repeat="item in vm.items">
+        {{item}}
+        <button type="button" class="close" ng-click="vm.delItem($index)">&times;</button>
+    </li>
+</ul>
+<div class="row animate-form">
+    <div class="row">
+        <span class="col-sm-2">透明度</span>
+        <input type="text" class="form-control col-sm-6" placeholder="请输入初始透明度" ng-model="param_opacity" ng-change="paramchange()">
+        <span class="col-sm-2">left</span>
+        <input type="text" class="form-control col-sm-6" placeholder="请输入初始left值" ng-model="param_left
+" ng-change="paramchange()">
+    </div>
+    <div class="row">
+        <span class="col-sm-2">top</span>
+        <input type="text" class="form-control col-sm-6" placeholder="请输入初始top值" ng-model="param_top" ng-change="paramchange()">
+        <span class="col-sm-2">时间</span>
+        <input type="text" class="form-control col-sm-6" placeholder="请输入初始动画持续时间" ng-model="param_time" ng-change="paramchange()">
+    </div>
+</div>
+<button class="btn btn-default mmm" ng-click="vm.addItem()">添加一条</button>
 <h3>说明</h3>
 <ul>
-  <li>
-    采用了第三方css类库Animate.css，具体信息以及参数请参考
-    <a href="http://daneden.github.io/animate.css/" target="_blank">官方文档</a>
-    。
-  </li>
-  <li>
-    通过ng-model来实时修改classname
-  </li>
+    <li>
+        采用了第三方css类库Animate.css，具体信息以及参数请参考
+        <a href="http://daneden.github.io/animate.css/" target="_blank">官方文档</a> 。
+    </li>
+    <li>
+        通过ng-model来实时修改classname
+    </li>
 </ul>
+<!--
+     <optgroup ng-repeat="(name, item) in choiceitems" label={{name}} >
+     <option ng-repeat="its in item">{{its}}</option>
+   </optgroup>
+-->

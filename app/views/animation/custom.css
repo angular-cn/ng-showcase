@@ -1,8 +1,23 @@
-.title{
-  color: #f35626;
-  background-image: -webkit-linear-gradient(92deg,#f35626,#feab3a);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-bottom: 20px;
-  line-height: 50px;
+.title {
+    color: #f35626;
+    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.animate-form>.row {
+    margin-bottom: 10px;
+}
+
+.animate-form span {
+    line-height: 34px;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.form-control {
+    width: 25%;
 }
